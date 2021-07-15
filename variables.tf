@@ -7,7 +7,7 @@ variable "profile" {
 # The AWS Region to use
 variable "region" {
   description = "Region to deploy the cluster into (e.g: us-west-2)" 
-  # default = "us-east-2"
+  default = "us-east-2"
 }
 
 # The public SSH key to use

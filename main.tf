@@ -2,7 +2,7 @@
 module "heracles" {
   source          = "./modules/heracles"
   region          = "${var.region}"
-  amisize         = "t2.large"    //  Smallest that meets the min specs for OS
+  amisize         = "t2.small"    //  Smallest that meets the min specs for OS
   vpc_cidr        = "10.0.0.0/16"
   subnetaz        = "${var.subnetaz}"
   subnet_cidr     = "10.0.1.0/24"
