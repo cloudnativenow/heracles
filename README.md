@@ -1,3 +1,3 @@
 ![Intro](./docs/heracles.jpg)
 
-Terraform with Amazon Provider OpenVPN Project for Access Control (e.g. VPN, LDAP, SSO)
+Terraform with Amazon Provider for Health Log Analytics test environments
