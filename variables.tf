@@ -1,7 +1,7 @@
 # The AWS Profile to use
 variable "profile" {
   description = "AWS Credentials Profile (e.g: heracles)"
-  # default = "heracles"
+  default = "heracles"
 }
 
 # The AWS Region to use
@@ -13,14 +13,14 @@ variable "region" {
 # The public SSH key to use
 variable "public_key_path" {
   description = "Public SSH Key to use (e.g: ~/.ssh/heracles.pub)"
-  # default = "~/.ssh/id_rsa.pub"
+  default = "~/.ssh/heracles.pub"
 }
 
 # This map defines which AZ to put the 'Public Subnet' in, based on the
 # region defined. You will typically not need to change this unless
 # you are running in a new region!
 variable "subnetaz" {
-  type = "map"
+  type = map
   default = {
     us-east-1 = "us-east-1a"
     us-east-2 = "us-east-2a"
