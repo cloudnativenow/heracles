@@ -41,8 +41,16 @@ python ./awslogs-agent-setup.py --non-interactive --region us-east-1 -c ./awslog
 service awslogs start
 chkconfig awslogs on
 
-# Install packages required to setup a Heracles node.
-# TBD
+# Install Docker
+yum update -y
+yum install -y docker
+service docker start
+usermod -a -G docker ec2-user
+chkconfig docker on
+
+# Install Docker Compose
+curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 
 # Allow the ec2-user to sudo without a tty, which is required when we run post
 # install scripts on the server.
