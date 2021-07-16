@@ -1,14 +1,14 @@
 //  Create the node userdata script.
 data "template_file" "setup-node" {
-  template = "${file("${path.module}/files/setup-node.sh")}"
+  template = file(path.module/files/setup-node.sh)
   vars = {
-    availability_zone = "${data.aws_availability_zones.azs.names[0]}"
+    availability_zone = data.aws_availability_zones.azs.names[0]
   }
 }
 
 // Create Elastic IP for the nodes
 resource "aws_eip" "node1_eip" {
-  instance = "${aws_instance.node1.id}"
+  instance = aws_instance.node1.id
   vpc      = true
 }
 
@@ -38,7 +38,7 @@ resource "aws_instance" "node1" {
     volume_type = "gp2"
   }
 
-  key_name = "${aws_key_pair.keypair.key_name}"
+  key_name = aws_key_pair.keypair.key_name
 
   //  Use our common tags and add a specific name.
   tags = merge(
