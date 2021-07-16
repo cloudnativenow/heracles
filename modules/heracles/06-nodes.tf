@@ -1,6 +1,6 @@
 //  Create the node userdata script.
 data "template_file" "setup-node" {
-  template = "${file("${path.module}/files/setup-master.sh")}"
+  template = "${file("${path.module}/files/setup-node.sh")}"
   vars = {
     availability_zone = "${data.aws_availability_zones.azs.names[0]}"
   }
