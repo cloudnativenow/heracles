@@ -121,3 +121,9 @@ EOF
 resource "aws_iam_access_key" "heracles-aws-user" {
   user = aws_iam_user.heracles-aws-user.name
 }
+
+# Create an SSH keypair
+resource "aws_key_pair" "keypair" {
+  key_name   = "${var.key_name}"
+  public_key = "${file(var.public_key_path)}"
+}
