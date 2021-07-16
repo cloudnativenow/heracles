@@ -14,5 +14,9 @@ module "heracles" {
 
 # Output some useful variables for quick SSH access etc.
 output "bastion-public_ip" {
-  value = "${module.heracles.bastion-public_ip}"
+  value = module.heracles.bastion-public_ip
+}
+
+output "node1-public_ip" {
+  value = module.heracles.node1-public_ip
 }
