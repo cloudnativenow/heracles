@@ -10,6 +10,12 @@ variable "region" {
   default = "us-east-2"
 }
 
+# Instance Count
+variable "instance_count" {
+  description = "Instance count (e.g. 10)"
+  default = 3
+}
+
 # The public SSH key to use
 variable "public_key_path" {
   description = "Public SSH Key to use (e.g: ~/.ssh/heracles.pub)"

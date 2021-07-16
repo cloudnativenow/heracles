@@ -6,13 +6,16 @@ data "template_file" "setup-node" {
   }
 }
 
-// Create Elastic IP for the nodes
+// Create Elastic IPs for the Nodes
 resource "aws_eip" "node_eip" {
-  instance = aws_instance.node.id
-  vpc      = true
+  instance = element(aws_instance.node.*.id,count.index)
+  count = var.instance_count
+  vpc   = true
 }
 
+// Create Nodes
 resource "aws_instance" "node" {
+  count                = var.instance_count
   ami                  = data.aws_ami.amazonlinux.id
   instance_type        = var.amisize
   subnet_id            = aws_subnet.public-subnet.id
@@ -45,7 +48,7 @@ resource "aws_instance" "node" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Node"
+      "Name", "Heracles Node-${count.index + 1}"
     )
   )
 }

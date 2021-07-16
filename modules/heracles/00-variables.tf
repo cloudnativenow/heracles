@@ -2,6 +2,10 @@ variable "region" {
   description = "The region to deploy the cluster in, e.g: us-east-1"
 }
 
+variable "instance_count" {
+  description = "Instance count (e.g. 10)"
+}
+
 variable "amisize" {
   description = "The size of the cluster nodes, e.g: t2.large"
 }
