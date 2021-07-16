@@ -34,3 +34,5 @@ variable "cluster_name" {
 variable "cluster_id" {
   description = "ID of the cluster, e.g: 'heracles-cluster-us-east-2'. Useful when running multiple clusters in the same AWS account."
 }
+
+data "aws_availability_zones" "azs" {}
