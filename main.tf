@@ -17,6 +17,6 @@ output "bastion-public_ip" {
   value = module.heracles.bastion-public_ip
 }
 
-output "node1-public_ip" {
-  value = module.heracles.node1-public_ip
+output "node-public_ip" {
+  value = module.heracles.node-public_ip
 }

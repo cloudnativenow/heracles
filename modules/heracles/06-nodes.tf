@@ -7,12 +7,12 @@ data "template_file" "setup-node" {
 }
 
 // Create Elastic IP for the nodes
-resource "aws_eip" "node1_eip" {
-  instance = aws_instance.node1.id
+resource "aws_eip" "node_eip" {
+  instance = aws_instance.node.id
   vpc      = true
 }
 
-resource "aws_instance" "node1" {
+resource "aws_instance" "node" {
   ami                  = data.aws_ami.rhel8_4.id
   instance_type        = var.amisize
   subnet_id            = aws_subnet.public-subnet.id
