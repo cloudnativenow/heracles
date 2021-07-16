@@ -11,3 +11,8 @@ module "heracles" {
   cluster_name    = "heracles-cluster"
   cluster_id      = "heracles-cluster-${var.region}"
 }
+
+# Output some useful variables for quick SSH access etc.
+output "bastion-public_ip" {
+  value = "${module.heracles.bastion-public_ip}"
+}
