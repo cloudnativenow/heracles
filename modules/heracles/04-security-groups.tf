@@ -20,12 +20,12 @@ resource "aws_security_group" "heracles-vpc" {
   }
 
   # Use our common tags and add a specific name.
-  tags = "${merge(
+  tags = merge(
     local.common_tags,
     map(
       "Name", "Heracles Internal VPC"
     )
-  )}"
+  )
 }
 
 # This security group allows public ingress to the instances for HTTP, HTTPS
