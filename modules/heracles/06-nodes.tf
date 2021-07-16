@@ -13,7 +13,7 @@ resource "aws_eip" "node_eip" {
 }
 
 resource "aws_instance" "node" {
-  ami                  = data.aws_ami.rhel8_4.id
+  ami                  = data.aws_ami.amazonlinux.id
   instance_type        = var.amisize
   subnet_id            = aws_subnet.public-subnet.id
   iam_instance_profile = aws_iam_instance_profile.heracles-instance-profile.id
@@ -45,7 +45,7 @@ resource "aws_instance" "node" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Node 1"
+      "Name", "Heracles Node"
     )
   )
 }
