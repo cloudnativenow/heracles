@@ -119,5 +119,5 @@ EOF
 
 # Create a IAM Access Key
 resource "aws_iam_access_key" "heracles-aws-user" {
-  user    = "aws_iam_user.heracles-aws-user.name"
+  user = aws_iam_user.heracles-aws-user.name
 }
