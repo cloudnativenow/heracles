@@ -56,7 +56,7 @@ chmod +x /usr/local/bin/docker-compose
 useradd -c "midserver" midserver -U -m -s /bin/bash
 usermod -aG wheel midserver
 URL="https://install.service-now.com/glide/distribution/builds/package/app-signed/mid-linux-installer/2021/06/07/mid-linux-installer.quebec-12-09-2020__patch4-hotfix1-06-03-2021_06-07-2021_1407.linux.x86-64.rpm"
-wget --progress=bar:force --no-check-certificate ${URL} -O mid.rpm
+wget --progress=bar:force --no-check-certificate $URL -O mid.rpm
 rpm -ivh --nodeps mid.rpm
 chown -R midserver:midserver /opt/servicenow
 chmod -R 775 /opt/servicenow/mid/agent/*.sh
