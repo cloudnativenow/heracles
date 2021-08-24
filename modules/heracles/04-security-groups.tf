@@ -1,7 +1,7 @@
 # This security group allows intra-node communication on all ports with all
 # protocols.
 resource "aws_security_group" "heracles-vpc" {
-  name        = "heracles-vpc"
+  name        = "${var.cluster_id}-sg"
   description = "Default security group that allows all instances in the VPC to talk to each other over any port and protocol."
   vpc_id      = aws_vpc.heracles.id
 
@@ -23,7 +23,7 @@ resource "aws_security_group" "heracles-vpc" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Internal VPC"
+      "Name", "${var.cluster_id}-sg"
     )
   )
 }
@@ -31,7 +31,7 @@ resource "aws_security_group" "heracles-vpc" {
 # This security group allows public ingress to the instances for HTTP, HTTPS
 # and common HTTP/S proxy ports.
 resource "aws_security_group" "heracles-public-ingress" {
-  name        = "heracles-public-ingress"
+  name        = "${var.cluster_id}-ingress"
   description = "Security group that allows public ingress to instances, HTTP, HTTPS and more."
   vpc_id      = aws_vpc.heracles.id
 
@@ -71,7 +71,7 @@ resource "aws_security_group" "heracles-public-ingress" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Public Ingress"
+      "Name", "${var.cluster_id}-ingress"
     )
   )
 }
@@ -79,7 +79,7 @@ resource "aws_security_group" "heracles-public-ingress" {
 # This security group allows public egress from the instances for HTTP and
 # HTTPS, which is needed for yum updates, git access etc etc.
 resource "aws_security_group" "heracles-public-egress" {
-  name        = "heracles-public-egress"
+  name        = "${var.cluster_id}-egress"
   description = "Security group that allows egress to the internet for instances over HTTP and HTTPS."
   vpc_id      = aws_vpc.heracles.id
 
@@ -103,14 +103,14 @@ resource "aws_security_group" "heracles-public-egress" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Public Egress"
+      "Name", "${var.cluster_id}-egress"
     )
   )
 }
 
 # Security group which allows SSH access to a host. Used for the bastion.
 resource "aws_security_group" "heracles-ssh" {
-  name        = "heracles-ssh"
+  name        = "${var.cluster_id}-ssh"
   description = "Security group that allows public ingress over SSH."
   vpc_id      = aws_vpc.heracles.id
 
@@ -126,7 +126,7 @@ resource "aws_security_group" "heracles-ssh" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles SSH Access"
+      "Name", "${var.cluster_id}-ssh"
     )
   )
 }

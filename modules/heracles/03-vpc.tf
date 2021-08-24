@@ -7,7 +7,7 @@ resource "aws_vpc" "heracles" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles VPC"
+      "Name", "${var.cluster_id}"
     )
   )
 }
@@ -20,7 +20,7 @@ resource "aws_internet_gateway" "heracles" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles IGW"
+      "Name", "${var.cluster_id}-igw"
     )
   )
 }
@@ -37,7 +37,7 @@ resource "aws_subnet" "public-subnet" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Public Subnet"
+      "Name", "${var.cluster_id}-pub"
     )
   )
 }
@@ -55,7 +55,7 @@ resource "aws_route_table" "public" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Public Route Table"
+      "Name", "${var.cluster_id}-prt"
     )
   )
 }

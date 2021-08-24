@@ -32,11 +32,11 @@ variable "public_key_path" {
 }
 
 variable "cluster_name" {
-  description = "Name of the cluster, e.g: 'heracles-cluster'. Useful when running multiple clusters in the same AWS account."
+  description = "Name of the cluster, e.g: 'hlawork1'. Useful when running multiple clusters in the same AWS account."
 }
 
 variable "cluster_id" {
-  description = "ID of the cluster, e.g: 'heracles-cluster-us-east-2'. Useful when running multiple clusters in the same AWS account."
+  description = "ID of the cluster, e.g: 'hlawork1-us-east-1'. Useful when running multiple clusters in the same AWS account."
 }
 
 data "aws_availability_zones" "azs" {}

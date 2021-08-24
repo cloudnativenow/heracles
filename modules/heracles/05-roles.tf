@@ -62,10 +62,10 @@ resource "aws_iam_instance_profile" "heracles-instance-profile" {
   role = aws_iam_role.heracles-instance-role.name
 }
 
-# Create a instance profile for the bastion. All profiles need a role, so use
+# Create a instance profile for the control. All profiles need a role, so use
 # our simple Heracles instance role.
-resource "aws_iam_instance_profile" "heracles-bastion-instance-profile" {
-  name  = "heracles-bastion-instance-profile"
+resource "aws_iam_instance_profile" "heracles-control-instance-profile" {
+  name  = "heracles-control-instance-profile"
   role = aws_iam_role.heracles-instance-role.name
 }
 

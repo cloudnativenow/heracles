@@ -1,7 +1,12 @@
+# Cluster Name
+variable "cluster_name" {
+  description = "Cluster Name (e.g: hlawork1)"
+}
+
 # The AWS Profile to use
 variable "profile" {
-  description = "AWS Credentials Profile (e.g: heracles)"
-  default = "heracles"
+  description = "AWS Credentials Profile (e.g: hlawork)"
+  default = "hlawork"
 }
 
 # The AWS Region to use

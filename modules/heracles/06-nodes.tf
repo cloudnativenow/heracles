@@ -11,6 +11,13 @@ resource "aws_eip" "node_eip" {
   instance = element(aws_instance.node.*.id,count.index)
   count = var.instance_count
   vpc   = true
+  # Use our common tags and add a specific name.
+  tags = merge(
+    local.common_tags,
+    map(
+      "Name", "${var.cluster_id}-node-${count.index + 1}-eip"
+    )
+  )  
 }
 
 // Create Nodes
@@ -29,17 +36,29 @@ resource "aws_instance" "node" {
     aws_security_group.heracles-public-egress.id,
   ]
 
-  //  We need at least 30GB for Heracles, let's be greedy...
+  //  Node Root Disk
   root_block_device {
     volume_size = 50
     volume_type = "gp2"
+    tags = merge(
+      local.common_tags,
+      map(
+        "Name", "${var.cluster_id}-node-${count.index + 1}-root"
+      )
+    )    
   }
 
-  # Storage for Docker, see:
+  # Node Data Disk
   ebs_block_device {
     device_name = "/dev/sdf"
     volume_size = 100
     volume_type = "gp2"
+    tags = merge(
+      local.common_tags,
+      map(
+        "Name", "${var.cluster_id}-node-${count.index + 1}-data"
+      )
+    )     
   }
 
   key_name = aws_key_pair.keypair.key_name
@@ -48,7 +67,7 @@ resource "aws_instance" "node" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", "Heracles Node-${count.index + 1}"
+      "Name", "${var.cluster_id}-node-${count.index + 1}"
     )
   )
 }

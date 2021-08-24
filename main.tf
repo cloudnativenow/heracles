@@ -9,13 +9,13 @@ module "heracles" {
   subnet_cidr     = "15.0.1.0/24"
   key_name        = "heracles"
   public_key_path = "${var.public_key_path}"
-  cluster_name    = "heracles-cluster"
-  cluster_id      = "heracles-cluster-${var.region}"
+  cluster_name    = "${var.cluster_name}"
+  cluster_id      = "${var.cluster_name}-${var.region}"
 }
 
 # Output some useful variables for quick SSH access etc.
-output "bastion-public_ip" {
-  value = module.heracles.bastion-public_ip
+output "control-public_ip" {
+  value = module.heracles.control-public_ip
 }
 
 output "node-public_ip" {
