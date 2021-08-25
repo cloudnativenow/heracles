@@ -1,9 +1,10 @@
-//  Create the mysql userdata script.
+//  Create the MySQL userdata script.
 data "template_file" "setup-mysql" {
   template = file("${path.module}/files/setup-mysql.sh")
   vars = {
     availability_zone = "${data.aws_availability_zones.azs.names[0]}"
     log_stream_name = "${var.cluster_id}-mysql"
+    region = "${var.region}"
   }
 }
 

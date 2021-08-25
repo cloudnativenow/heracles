@@ -4,6 +4,7 @@ data "template_file" "setup-control" {
   vars = {
     availability_zone = "${data.aws_availability_zones.azs.names[0]}"
     log_stream_name = "${var.cluster_id}-control"
+    region = "${var.region}"
   }
 }
 
