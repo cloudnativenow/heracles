@@ -3,6 +3,7 @@ data "template_file" "setup-node" {
   template = file("${path.module}/files/setup-node.sh")
   vars = {
     availability_zone = "${data.aws_availability_zones.azs.names[0]}"
+    log_stream_name = "${var.cluster_id}-node-${count.index + 1}"
   }
 }
 
