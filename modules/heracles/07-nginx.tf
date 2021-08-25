@@ -1,4 +1,4 @@
-//  Create the node userdata script.
+//  Create the nginx userdata script.
 data "template_file" "setup-nginx" {
   template = file("${path.module}/files/setup-nginx.sh")
   vars = {

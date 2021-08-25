@@ -4,6 +4,10 @@ output "control-public_ip" {
   value = aws_eip.control_eip.public_ip
 }
 
-output "node-public_ip" {
-  value = aws_eip.node_eip.*.public_ip
+output "nginx-public_ip" {
+  value = aws_eip.nginx_eip.*.public_ip
+}
+
+output "spring-public_ip" {
+  value = aws_eip.spring_eip.*.public_ip
 }

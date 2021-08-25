@@ -7,7 +7,7 @@ variable "instance_count" {
 }
 
 variable "amisize" {
-  description = "The size of the cluster nodes, e.g: t2.large"
+  description = "The size of the cluster spring servers, e.g: t2.large"
 }
 
 variable "vpc_cidr" {

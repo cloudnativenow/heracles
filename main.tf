@@ -18,6 +18,10 @@ output "control-public_ip" {
   value = module.heracles.control-public_ip
 }
 
-output "node-public_ip" {
-  value = module.heracles.node-public_ip
+output "nginx-public_ip" {
+  value = module.heracles.nginx-public_ip
+}
+
+output "spring-public_ip" {
+  value = module.heracles.spring-public_ip
 }
