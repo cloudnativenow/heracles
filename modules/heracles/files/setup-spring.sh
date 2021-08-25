@@ -46,7 +46,6 @@ log_group_name = /var/log/user-data.log
 file = /var/log/user-data.log
 EOF
 
-# Configure Cloudwatch
 cat > /etc/awslogs/awscli.conf <<- EOF
 [plugins]
 cwlogs = cwlogs
