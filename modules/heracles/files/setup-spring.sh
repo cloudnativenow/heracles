@@ -28,6 +28,7 @@ yum install -y awslogs
 cat > /etc/awslogs/awslogs.conf <<- EOF
 [general]
 state_file = /var/awslogs/state/agent-state
+use_gzip_http_content_encoding = true
 
 [/var/log/messages]
 log_stream_name = ${log_stream_name}
@@ -41,6 +42,14 @@ initial_position = start_of_file
 log_stream_name = ${log_stream_name}
 log_group_name = /var/log/user-data.log
 file = /var/log/user-data.log
+EOF
+
+# Configure Cloudwatch
+cat > /etc/awslogs/awscli.conf <<- EOF
+[plugins]
+cwlogs = cwlogs
+[default]
+region = "${region}"
 EOF
 
 # Start the awslogs service, also start on reboot.
