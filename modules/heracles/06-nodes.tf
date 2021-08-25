@@ -38,7 +38,7 @@ resource "aws_instance" "node" {
 
   //  Node Root Disk
   root_block_device {
-    volume_size = 50
+    volume_size = 8
     volume_type = "gp2"
     tags = merge(
       local.common_tags,
@@ -49,17 +49,17 @@ resource "aws_instance" "node" {
   }
 
   # Node Data Disk
-  ebs_block_device {
-    device_name = "/dev/sdf"
-    volume_size = 100
-    volume_type = "gp2"
-    tags = merge(
-      local.common_tags,
-      map(
-        "Name", "${var.cluster_id}-node-${count.index + 1}-data"
-      )
-    )     
-  }
+  # ebs_block_device {
+  #   device_name = "/dev/sdf"
+  #   volume_size = 16
+  #   volume_type = "gp2"
+  #   tags = merge(
+  #     local.common_tags,
+  #     map(
+  #       "Name", "${var.cluster_id}-node-${count.index + 1}-data"
+  #     )
+  #   )     
+  # }
 
   key_name = aws_key_pair.keypair.key_name
 
