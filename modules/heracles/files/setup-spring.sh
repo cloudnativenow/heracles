@@ -25,6 +25,8 @@ yum update -y
 yum install -y awslogs
 
 # Configure Cloudwatch
+mkdir -p /var/awslogs/state
+
 cat > /etc/awslogs/awslogs.conf <<- EOF
 [general]
 state_file = /var/awslogs/state/agent-state
@@ -49,15 +51,15 @@ cat > /etc/awslogs/awscli.conf <<- EOF
 [plugins]
 cwlogs = cwlogs
 [default]
-region = "${region}"
+region = ${region}
 EOF
 
 # Start the awslogs service, also start on reboot.
-# Note: Errors go to /var/log/awslogs.log
+# NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd
 
-# Update Packages
+# Install EPEL
 yum-config-manager --enable epel
 
 # Install Ansible
