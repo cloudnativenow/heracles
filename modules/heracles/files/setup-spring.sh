@@ -63,3 +63,6 @@ yum-config-manager --enable epel
 
 # Install Ansible
 yum -y install ansible
+
+# Install Java
+amazon-linux-extras install java-openjdk11 -y

@@ -1,4 +1,4 @@
-# This security group allows intra-node communication on all ports with all
+# This security group allows intra-server communication on all ports with all
 # protocols.
 resource "aws_security_group" "heracles-vpc" {
   name        = "${var.cluster_id}-sg"
@@ -67,7 +67,7 @@ resource "aws_security_group" "heracles-public-ingress" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # Use our common tags and add a specific name.
+    # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
     map(
