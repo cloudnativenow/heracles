@@ -18,8 +18,14 @@ cat > /etc/aws/aws.conf <<- EOF
 Zone = ${availability_zone}
 EOF
 
-# Create initial logs config.
-cat > ./awslogs.conf <<- EOF
+# Update Repos
+yum update -y
+
+# Install Cloudwatch
+yum install -y awslogs
+
+# Configure Cloudwatch
+cat > /etc/awslogs/awslogs.conf <<- EOF
 [general]
 state_file = /var/awslogs/state/agent-state
 
@@ -37,18 +43,13 @@ log_group_name = /var/log/user-data.log
 file = /var/log/user-data.log
 EOF
 
-# Download and run the AWS logs agent.
-curl https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O
-python ./awslogs-agent-setup.py --non-interactive --region ${region} -c ./awslogs.conf
-
 # Start the awslogs service, also start on reboot.
 # Note: Errors go to /var/log/awslogs.log
-service awslogs start
-chkconfig awslogs on
+systemctl enable awslogsd.service
+systemctl start awslogsd
 
 # Update Packages
 yum-config-manager --enable epel
-yum update -y
 
 # Install Ansible
 yum -y install ansible
