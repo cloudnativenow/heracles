@@ -30,6 +30,7 @@ mkdir -p /var/awslogs/state
 cat > /etc/awslogs/awslogs.conf <<- EOF
 [general]
 state_file = /var/awslogs/state/agent-state
+use_gzip_http_content_encoding = true
 
 [/var/log/messages]
 log_stream_name = ${log_stream_name}
@@ -53,7 +54,7 @@ cwlogs = cwlogs
 region = ${region}
 EOF
 
-# Start the awslogs service, also start on reboot.
+# Start the awslogsd service, also start on reboot.
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd

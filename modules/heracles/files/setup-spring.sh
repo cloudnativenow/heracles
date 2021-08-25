@@ -54,7 +54,7 @@ cwlogs = cwlogs
 region = ${region}
 EOF
 
-# Start the awslogs service, also start on reboot.
+# Start the awslogsd service, also start on reboot.
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd
