@@ -27,7 +27,7 @@ resource "aws_instance" "spring" {
   ami                  = data.aws_ami.amazonlinux.id
   instance_type        = var.amisize
   subnet_id            = aws_subnet.public-subnet.id
-  iam_instance_profile = aws_iam_instance_profile.heracles-instance-profile.id
+  iam_instance_profile = aws_iam_instance_profile.heracles-spring-instance-profile.id
   user_data            = data.template_file.setup-spring.rendered
 
   vpc_security_group_ids = [

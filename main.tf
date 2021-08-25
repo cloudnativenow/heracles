@@ -25,3 +25,7 @@ output "nginx-public_ip" {
 output "spring-public_ip" {
   value = module.heracles.spring-public_ip
 }
+
+output "mysql-public_ip" {
+  value = module.heracles.mysql-public_ip
+}

@@ -76,6 +76,20 @@ resource "aws_iam_instance_profile" "heracles-nginx-instance-profile" {
   role = aws_iam_role.heracles-instance-role.name
 }
 
+# Create a instance profile for the control. All profiles need a role, so use
+# our simple Heracles instance role.
+resource "aws_iam_instance_profile" "heracles-spring-instance-profile" {
+  name  = "heracles-spring-instance-profile"
+  role = aws_iam_role.heracles-instance-role.name
+}
+
+# Create a instance profile for MySQL Database. All profiles need a role, so use
+# our simple Heracles instance role.
+resource "aws_iam_instance_profile" "heracles-mysql-instance-profile" {
+  name  = "heracles-mysql-instance-profile"
+  role = aws_iam_role.heracles-instance-role.name
+}
+
 # Create a user and access key for heracles-only permissions
 resource "aws_iam_user" "heracles-aws-user" {
   name = "heracles-aws-user"
