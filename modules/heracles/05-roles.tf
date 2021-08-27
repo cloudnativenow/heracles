@@ -2,7 +2,7 @@
 # This role has a policy saying it can be assumed by ec2
 # instances.
 resource "aws_iam_role" "heracles-instance-role" {
-  name = "heracles-instance-role"
+  name = "${var.cluster_id}-instance-role"
 
   assume_role_policy = <<EOF
 {
@@ -24,7 +24,7 @@ EOF
 # This policy allows an instance to forward logs to CloudWatch, and
 # create the Log Stream or Log Group if it doesn't exist.
 resource "aws_iam_policy" "heracles-policy-forward-logs" {
-  name        = "heracles-instance-forward-logs"
+  name        = "${var.cluster_id}-instance-forward-logs"
   path        = "/"
   description = "Allows an instance to forward logs to CloudWatch"
 
@@ -51,54 +51,54 @@ EOF
 
 # Attach the policies to the roles.
 resource "aws_iam_policy_attachment" "heracles-attachment-forward-logs" {
-  name       = "heracles-attachment-forward-logs"
+  name       = "${var.cluster_id}-attachment-forward-logs"
   roles      = [aws_iam_role.heracles-instance-role.name]
   policy_arn = aws_iam_policy.heracles-policy-forward-logs.arn
 }
 
 # Create a instance profile for the role.
 resource "aws_iam_instance_profile" "heracles-instance-profile" {
-  name  = "heracles-instance-profile"
+  name  = "${var.cluster_id}-instance-profile"
   role = aws_iam_role.heracles-instance-role.name
 }
 
 # Create a instance profile for the control. All profiles need a role, so use
 # our simple Heracles instance role.
 resource "aws_iam_instance_profile" "heracles-control-instance-profile" {
-  name  = "heracles-control-instance-profile"
+  name  = "${var.cluster_id}-control-instance-profile"
   role = aws_iam_role.heracles-instance-role.name
 }
 
 # Create a instance profile for the control. All profiles need a role, so use
 # our simple Heracles instance role.
 resource "aws_iam_instance_profile" "heracles-nginx-instance-profile" {
-  name  = "heracles-nginx-instance-profile"
+  name  = "${var.cluster_id}-nginx-instance-profile"
   role = aws_iam_role.heracles-instance-role.name
 }
 
 # Create a instance profile for the control. All profiles need a role, so use
 # our simple Heracles instance role.
 resource "aws_iam_instance_profile" "heracles-spring-instance-profile" {
-  name  = "heracles-spring-instance-profile"
+  name  = "${var.cluster_id}-spring-instance-profile"
   role = aws_iam_role.heracles-instance-role.name
 }
 
 # Create a instance profile for MySQL Database. All profiles need a role, so use
 # our simple Heracles instance role.
 resource "aws_iam_instance_profile" "heracles-mysql-instance-profile" {
-  name  = "heracles-mysql-instance-profile"
+  name  = "${var.cluster_id}-mysql-instance-profile"
   role = aws_iam_role.heracles-instance-role.name
 }
 
 # Create a user and access key for heracles-only permissions
 resource "aws_iam_user" "heracles-aws-user" {
-  name = "heracles-aws-user"
+  name = "${var.cluster_id}-aws-user"
   path = "/"
 }
 
 # Create a IAM User Policy
 resource "aws_iam_user_policy" "heracles-aws-user" {
-  name = "heracles-aws-user-policy"
+  name = "${var.cluster_id}-aws-user-policy"
   user = aws_iam_user.heracles-aws-user.name
 
   policy = <<EOF

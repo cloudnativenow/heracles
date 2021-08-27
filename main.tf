@@ -7,7 +7,7 @@ module "heracles" {
   vpc_cidr        = "15.0.0.0/16"
   subnetaz        = "${var.subnetaz}"
   subnet_cidr     = "15.0.1.0/24"
-  key_name        = "heracles"
+  key_name        = "${var.cluster_name}-${var.region}"
   public_key_path = "${var.public_key_path}"
   cluster_name    = "${var.cluster_name}"
   cluster_id      = "${var.cluster_name}-${var.region}"
