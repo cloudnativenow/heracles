@@ -63,3 +63,6 @@ yum-config-manager --enable epel
 
 # Install Ansible
 yum -y install ansible
+
+# Install Tools
+yum -y install telnet jq htop
