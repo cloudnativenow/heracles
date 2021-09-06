@@ -19,14 +19,30 @@ output "control-public_ip" {
   value = module.heracles.control-public_ip
 }
 
+output "control-private_ip" {
+  value = module.heracles.control-private_ip
+}
+
 output "nginx-public_ip" {
   value = module.heracles.nginx-public_ip
+}
+
+output "nginx-private_ip" {
+  value = module.heracles.nginx-private_ip
 }
 
 output "spring-public_ip" {
   value = module.heracles.spring-public_ip
 }
 
+output "spring-private_ip" {
+  value = module.heracles.spring-private_ip
+}
+
 output "mysql-public_ip" {
   value = module.heracles.mysql-public_ip
+}
+
+output "mysql-private_ip" {
+  value = module.heracles.mysql-private_ip
 }
