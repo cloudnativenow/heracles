@@ -3,7 +3,8 @@ module "heracles" {
   source          = "./modules/heracles"
   region          = "${var.region}"
   instance_count  = "${var.instance_count}"
-  amisize         = "t2.small"    //  Smallest that meets the min specs for OS
+  amisize         = "t2.small"    
+  volumesize      = "50"
   vpc_cidr        = "15.0.0.0/16"
   subnetaz        = "${var.subnetaz}"
   subnet_cidr     = "15.0.1.0/24"
