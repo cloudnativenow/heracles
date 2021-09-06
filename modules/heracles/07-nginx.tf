@@ -38,7 +38,7 @@ resource "aws_instance" "nginx" {
 
   //  NGINX Server Root Disk
   root_block_device {
-    volume_size = 50
+    volume_size = var.volumesize
     volume_type = "gp2"
     tags = merge(
       local.common_tags,

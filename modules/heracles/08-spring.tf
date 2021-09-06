@@ -40,7 +40,7 @@ resource "aws_instance" "spring" {
 
   //  spring Root Disk
   root_block_device {
-    volume_size = 8
+    volume_size = var.volumesize
     volume_type = "gp2"
     tags = merge(
       local.common_tags,
@@ -53,7 +53,7 @@ resource "aws_instance" "spring" {
   # spring Data Disk
   # ebs_block_device {
   #   device_name = "/dev/sdf"
-  #   volume_size = 16
+  #   volume_size = var.volumesize
   #   volume_type = "gp2"
   #   tags = merge(
   #     local.common_tags,
