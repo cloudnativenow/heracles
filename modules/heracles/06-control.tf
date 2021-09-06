@@ -24,7 +24,7 @@ resource "aws_eip" "control_eip" {
 # Control Server
 resource "aws_instance" "control" {
   ami                  = data.aws_ami.amazonlinux.id
-  instance_type        = "t2.small"
+  instance_type        = var.amisize
   iam_instance_profile = aws_iam_instance_profile.heracles-control-instance-profile.id
   user_data            = data.template_file.setup-control.rendered
   subnet_id            = aws_subnet.public-subnet.id

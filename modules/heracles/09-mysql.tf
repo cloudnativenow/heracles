@@ -24,7 +24,7 @@ resource "aws_eip" "mysql_eip" {
 # NGINX Server
 resource "aws_instance" "mysql" {
   ami                  = data.aws_ami.amazonlinux.id
-  instance_type        = "t2.small"
+  instance_type        = var.amisize
   iam_instance_profile = aws_iam_instance_profile.heracles-mysql-instance-profile.id
   user_data            = data.template_file.setup-mysql.rendered
   subnet_id            = aws_subnet.public-subnet.id
