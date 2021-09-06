@@ -66,3 +66,6 @@ yum -y install ansible
 
 # Install Tools
 yum -y install telnet jq htop
+
+# Install NGINX
+amazon-linux-extras install nginx1 -y
