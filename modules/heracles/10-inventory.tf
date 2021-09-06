@@ -1,13 +1,14 @@
 //  Collect together all of the output variables needed to build to the final
 //  inventory from the inventory template
 
-data "template_file" "inventory" {
-  template = "${file("${path.cwd}/inventory.template.cfg")}"
-  vars = {}
-}
-
-//  Create the inventory.
 resource "local_file" "inventory" {
-  content     = "${data.template_file.inventory.rendered}"
-  filename = "${path.cwd}/inventory.cfg"
+ content = templatefile("inventory.template.cfg",
+  {
+      control-public_ip = aws_eip.control_eip.public_ip,
+      nginx-public_ip = aws_eip.nginx_eip.public_ip,
+      spring-public_ip = aws_eip.spring_eip.*.public_ip,
+      mysql-public_ip = aws_eip.mysql_eip.public_ip
+  }
+ )
+ filename = "inventory.cfg"
 }
