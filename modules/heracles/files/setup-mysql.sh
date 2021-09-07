@@ -57,20 +57,3 @@ EOF
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd
-
-# Install MariaDB (e.g. Maria DB 5.5.68)
-yum install -y mariadb-server
-systemctl enable mariadb
-systemctl start mariadb
-
-# Run Install Script
-mysql -u root <<EOF
-DROP USER ''@'localhost';
-CREATE DATABASE IF NOT EXISTS petclinic;
-ALTER DATABASE petclinic
-  DEFAULT CHARACTER SET utf8
-  DEFAULT COLLATE utf8_general_ci;
-  GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'%' IDENTIFIED BY 'petclinic';
-FLUSH PRIVILEGES;
-EXIT;
-EOF
