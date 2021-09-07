@@ -1,6 +1,8 @@
 ---
 # This playbook contains common plays that will be run on all nginx nodes.
 
-- name: install nginx
+- name: Install NGINX
   command: amazon-linux-extras install nginx1 -y
   become: yes
+  tags:
+  - nginx
