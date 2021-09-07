@@ -7,7 +7,7 @@
   tags:
     - epel
 
-- name: Installing Common Tools
+- name: Install Common Tools
   yum: name={{ item }} state=present
   with_items:
    - telnet
@@ -15,6 +15,7 @@
    - htop
    - zip 
    - unzip
+   - python-pip
   become: yes
   tags:
-    - tools  
+    - tools

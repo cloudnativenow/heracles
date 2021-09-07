@@ -15,30 +15,32 @@
   tags:
     - mysql
    
-- name: Installing PyMySQL
+- name: Install PyMySQL
   pip:
-    name: PyMySQL
-    executable: pip3
+    name: pymysql
+    state: present
+  become: yes
   tags:
-    - mysql       
+    - mysql      
 
-# - name: Configuring the PetClinic Database
-#   community.mysql.mysql_query:
-#     login_user: root
-#     query:
-#     - CREATE DATABASE IF NOT EXISTS petclinic;
-#     single_transaction: yes
-#   tags:
-#     - mysql       
+- name: Configure Logging Properties
+  community.mysql.mysql_query:
+    query:
+    - SET GLOBAL general_log = 'ON';
+    - SET GLOBAL general_log_file = '/var/log/mariadb/all.log';
+    single_transaction: yes
+  become: yes
+  tags:
+    - mysql
 
-# Run Install Script
-# mysql -u root <<EOF
-# DROP USER ''@'localhost';
-# CREATE DATABASE IF NOT EXISTS petclinic;
-# ALTER DATABASE petclinic
-#   DEFAULT CHARACTER SET utf8
-#   DEFAULT COLLATE utf8_general_ci;
-#   GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'%' IDENTIFIED BY 'petclinic';
-# FLUSH PRIVILEGES;
-# EXIT;
-# EOF
+- name: Configure PetClinic Database
+  community.mysql.mysql_query:
+    query:
+    - CREATE DATABASE IF NOT EXISTS petclinic;
+    - ALTER DATABASE petclinic DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+    - GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'%' IDENTIFIED BY 'petclinic';
+    - FLUSH PRIVILEGES;
+    single_transaction: yes
+  become: yes
+  tags:
+    - mysql  
