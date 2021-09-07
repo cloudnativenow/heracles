@@ -14,7 +14,11 @@
   with_items:
    - docker
   become: yes
+  tags:
+    - control  
 
 - name: docker service state
   service: name=docker enabled=yes state=started
   become: yes
+  tags:
+    - control  

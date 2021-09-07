@@ -5,4 +5,4 @@
   command: amazon-linux-extras install java-openjdk11 -y
   become: yes
   tags:
-    - java
+    - spring
