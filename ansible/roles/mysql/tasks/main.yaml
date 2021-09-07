@@ -1,6 +1,16 @@
 ---
-# This playbook contains common plays that will be run on all MYSQL nodes.
+# This playbook installs MySQL
 
-- include: install_mysql.yaml
+- name: Install MySQL
+  yum: name={{ item }} state=present
+  with_items:
+   - mariadb-server
+  become: yes
+  tags:
+    - mysql  
+
+- name: mariadb service state
+  service: name=mariadb enabled=yes state=started
+  become: yes
   tags:
     - mysql

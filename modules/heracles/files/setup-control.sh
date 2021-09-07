@@ -57,10 +57,3 @@ EOF
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd
-
-# Install Docker
-yum update -y
-yum install -y docker
-service docker start
-usermod -a -G docker ec2-user
-chkconfig docker on

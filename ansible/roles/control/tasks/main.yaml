@@ -1,0 +1,20 @@
+
+---
+# This playbook installs control node software
+
+# Install Docker
+# yum update -y
+# yum install -y docker
+# service docker start
+# usermod -a -G docker ec2-user
+# chkconfig docker on
+
+- name: Install Docker
+  yum: name={{ item }} state=present
+  with_items:
+   - docker
+  become: yes
+
+- name: docker service state
+  service: name=docker enabled=yes state=started
+  become: yes
