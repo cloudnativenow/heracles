@@ -1,7 +1,7 @@
 ---
 # This playbook contains common plays that will be run on all nodes.
 
-- name: Installing EPEL Repository
+- name: Install EPEL Repository
   command: yum-config-manager --enable epel
   become: yes
   tags:

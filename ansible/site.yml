@@ -8,28 +8,28 @@
   roles:
     - common
 
-- name: Installing control node(s) software
+- name: Install control node(s) software
   hosts: control
   remote_user: ec2-user
 
   roles:
     - control       
 
-- name: Installing NGINX node(s) software
+- name: Install NGINX node(s) software
   hosts: nginx
   remote_user: ec2-user
 
   roles:
     - nginx
 
-- name: Installing Java Spring Boot node(s) software
+- name: Install Java Spring Boot node(s) software
   hosts: spring
   remote_user: ec2-user
 
   roles:
     - spring
 
-- name: Installing MySQL Database node(s) software
+- name: Install MySQL Database node(s) software
   hosts: mysql
   remote_user: ec2-user
 

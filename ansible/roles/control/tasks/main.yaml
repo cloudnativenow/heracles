@@ -9,7 +9,7 @@
 # usermod -a -G docker ec2-user
 # chkconfig docker on
 
-- name: Installing Docker
+- name: Install Docker
   yum: name={{ item }} state=present
   with_items:
    - docker

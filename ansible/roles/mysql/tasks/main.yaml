@@ -1,7 +1,7 @@
 ---
 # This playbook installs MySQL
 
-- name: Installing MySQL
+- name: Install MySQL
   yum: name={{ item }} state=present
   with_items:
    - mariadb-server
@@ -9,11 +9,27 @@
   tags:
     - mysql  
 
-- name: Setting MariaDB service state
+- name: Set MariaDB service state
   service: name=mariadb enabled=yes state=started
   become: yes
   tags:
     - mysql
+   
+- name: Installing PyMySQL
+  pip:
+    name: PyMySQL
+    executable: pip3
+  tags:
+    - mysql       
+
+# - name: Configuring the PetClinic Database
+#   community.mysql.mysql_query:
+#     login_user: root
+#     query:
+#     - CREATE DATABASE IF NOT EXISTS petclinic;
+#     single_transaction: yes
+#   tags:
+#     - mysql       
 
 # Run Install Script
 # mysql -u root <<EOF
