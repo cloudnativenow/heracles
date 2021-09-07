@@ -1,28 +1,35 @@
 ---
 # This playbook deploys the whole application stack in this site.
 
-- name: Apply common software to all nodes
+- name: Applying common software to all nodes
   hosts: all
   remote_user: ec2-user
 
   roles:
     - common
 
-- name: NGINX node(s) software
+- name: Installing control node(s) software
+  hosts: control
+  remote_user: ec2-user
+
+  roles:
+    - control       
+
+- name: Installing NGINX node(s) software
   hosts: nginx
   remote_user: ec2-user
 
   roles:
     - nginx
 
-- name: Java Spring Boot node(s) software
+- name: Installing Java Spring Boot node(s) software
   hosts: spring
   remote_user: ec2-user
 
   roles:
     - spring
 
-- name: MySQL Database node(s) software
+- name: Installing MySQL Database node(s) software
   hosts: mysql
   remote_user: ec2-user
 
