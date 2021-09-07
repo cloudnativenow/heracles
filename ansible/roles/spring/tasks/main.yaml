@@ -1,0 +1,6 @@
+---
+# This playbook contains common plays that will be run on all spring nodes.
+
+- name: install java
+  command: amazon-linux-extras install java-openjdk11 -y
+  become: yes

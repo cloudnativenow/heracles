@@ -58,15 +58,6 @@ EOF
 systemctl enable awslogsd.service
 systemctl start awslogsd
 
-# Install EPEL
-yum-config-manager --enable epel
-
-# Install Ansible
-yum -y install ansible
-
-# Install Tools
-yum -y install telnet jq htop
-
 # Install MariaDB (e.g. Maria DB 5.5.68)
 yum install -y mariadb-server
 systemctl enable mariadb

@@ -1,0 +1,14 @@
+---
+# This playbook contains common plays that will be run on all nodes.
+
+- name: install epel
+  command: yum-config-manager --enable epel
+  become: yes
+
+- name: Install tools
+  yum: name={{ item }} state=present
+  with_items:
+   - telnet
+   - jq
+   - htop
+  become: yes

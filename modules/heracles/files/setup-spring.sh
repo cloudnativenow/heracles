@@ -57,15 +57,3 @@ EOF
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd
-
-# Install EPEL
-yum-config-manager --enable epel
-
-# Install Ansible
-yum -y install ansible
-
-# Install Tools
-yum -y install telnet jq htop
-
-# Install Java
-amazon-linux-extras install java-openjdk11 -y

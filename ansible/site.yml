@@ -1,0 +1,23 @@
+---
+# This playbook deploys the whole application stack in this site.
+
+- name: apply common configuration to all nodes
+  hosts: all
+  remote_user: ec2-user
+
+  roles:
+    - common
+
+- name: nginx nodes software
+  hosts: nginx
+  remote_user: ec2-user
+
+  roles:
+    - nginx    
+
+- name: springs nodes software
+  hosts: spring
+  remote_user: ec2-user
+
+  roles:
+    - spring

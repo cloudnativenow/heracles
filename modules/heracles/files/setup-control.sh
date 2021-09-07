@@ -58,15 +58,6 @@ EOF
 systemctl enable awslogsd.service
 systemctl start awslogsd
 
-# Install EPEL
-yum-config-manager --enable epel
-
-# Install Ansible
-yum -y install ansible
-
-# Install Tools
-yum -y install telnet jq htop
-
 # Install Docker
 yum update -y
 yum install -y docker
