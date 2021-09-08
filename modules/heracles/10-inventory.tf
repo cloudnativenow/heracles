@@ -9,5 +9,6 @@ resource "local_file" "inventory" {
       mysql-public_ip = aws_eip.mysql_eip.public_ip
   }
  )
- filename = "inventory.cfg"
+ filename = "inventory-${var.cluster_name}.cfg"
 }
+
