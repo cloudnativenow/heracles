@@ -1,0 +1,32 @@
+---
+# This playbook installs filebeat software
+
+- name: Install Filebeat Repo
+  shell: |
+    cat <<EOF | sudo tee /etc/yum.repos.d/elasticsearch.repo
+    [elastic-7.x]
+    name=Elastic repository for 7.x packages
+    baseurl=https://artifacts.elastic.co/packages/7.x/yum
+    gpgcheck=1
+    gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    enabled=1
+    autorefresh=1
+    type=rpm-md
+    EOF
+  become: yes
+  tags:
+    - filebeat
+
+- name: Install Filebeat
+  yum: name={{ item }} state=present
+  with_items:
+   - filebeat
+  become: yes
+  tags:
+    - filebeat  
+
+- name: Set Filebeat service state
+  service: name=filebeat enabled=yes state=started
+  become: yes
+  tags:
+    - filebeat

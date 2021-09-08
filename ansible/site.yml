@@ -34,4 +34,11 @@
   remote_user: ec2-user
 
   roles:
-    - mysql    
+    - mysql
+
+- name: Install Filebeat software
+  hosts: nginx, spring, mysql
+  remote_user: ec2-user
+
+  roles:
+    - filebeat
