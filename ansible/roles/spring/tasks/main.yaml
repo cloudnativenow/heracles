@@ -6,17 +6,3 @@
   become: yes
   tags:
     - spring
-
-# - name: Download Pet Clinic App
-#   shell: |
-#     GITHUB_TOKEN=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
-#     export ARCHIVE_DOWNLOAD_URL=$(curl -Ls "https://api.github.com/repos/pangealab/castor/actions/artifacts" | jq -r .artifacts[0].archive_download_url)
-#     wget --header="Authorization: Bearer $GITHUB_TOKEN" -qO- $ARCHIVE_DOWNLOAD_URL | zcat > app.jar
-#   become: yes
-#   tags:
-#     - app
-
-# environment:
-#     CONFIGURE_OPTS: '--disable-install-doc'
-#     RBENV_ROOT: '{{ rbenv_root }}'
-#     PATH: '{{ rbenv_root }}/bin:{{ rbenv_root }}/shims:{{ rbenv_plugins }}/ruby-build/bin:{{ ansible_env.PATH }}'    

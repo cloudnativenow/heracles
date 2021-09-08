@@ -42,3 +42,10 @@
 
   roles:
     - filebeat
+
+- name: Install ACC software
+  hosts: nginx, spring, mysql
+  remote_user: ec2-user
+
+  roles:
+    - acc
