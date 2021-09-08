@@ -11,4 +11,4 @@
   command: rpm -ivh --nodeps acc.rpm
   become: yes  
   tags:
-    - acc  
+    - acc

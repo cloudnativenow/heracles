@@ -49,3 +49,10 @@
 
   roles:
     - acc
+
+- name: Install MID software
+  hosts: control
+  remote_user: ec2-user
+
+  roles:
+    - mid    

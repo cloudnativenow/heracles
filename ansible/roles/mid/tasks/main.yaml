@@ -1,0 +1,14 @@
+---
+# This playbook installs MID software
+
+- name: Download MID software
+  command: wget --progress=bar:force --no-check-certificate {{mid_url}} -O mid.rpm
+  become: yes 
+  tags:
+    - mid
+
+- name: Install MI software
+  command: rpm -ivh --nodeps mid.rpm
+  become: yes  
+  tags:
+    - mid
