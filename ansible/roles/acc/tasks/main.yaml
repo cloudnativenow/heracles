@@ -1,8 +1,14 @@
 ---
 # This playbook installs ACC software
 
-- name: Install Filebeat Repo
-  command: wget --progress=bar:force --no-check-certificate {{ acc_url }} -O acc.rpm
+- name: Download ACC software
+  command: wget --progress=bar:force --no-check-certificate {{acc_url}} -O acc.rpm
   become: yes 
   tags:
     - acc
+
+- name: Install ACC software
+  command: rpm -ivh --nodeps acc.rpm
+  become: yes  
+  tags:
+    - acc  
