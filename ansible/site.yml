@@ -8,12 +8,19 @@
   roles:
     - common
 
-- name: Install control node(s) software
-  hosts: control
+- name: Install MySQL Database node(s) software
+  hosts: mysql
   remote_user: ec2-user
 
   roles:
-    - control       
+    - mysql
+
+- name: Install Java Spring Boot node(s) software
+  hosts: spring
+  remote_user: ec2-user
+
+  roles:
+    - spring     
 
 - name: Install NGINX node(s) software
   hosts: nginx
@@ -22,19 +29,12 @@
   roles:
     - nginx
 
-- name: Install Java Spring Boot node(s) software
-  hosts: spring
+- name: Install control node(s) software
+  hosts: control
   remote_user: ec2-user
 
   roles:
-    - spring
-
-- name: Install MySQL Database node(s) software
-  hosts: mysql
-  remote_user: ec2-user
-
-  roles:
-    - mysql
+    - control
 
 - name: Install Filebeat software
   hosts: nginx, spring, mysql
