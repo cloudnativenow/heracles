@@ -2,13 +2,18 @@
 # This playbook installs ACC software
 
 - name: Download ACC software
-  command: wget --progress=bar:force --no-check-certificate {{acc_url}} -O acc.rpm
-  become: yes 
+  become: yes
+  command: wget --progress=bar:force --no-check-certificate {{acc_url}} -O /root/acc.rpm
   tags:
     - acc
 
 - name: Install ACC software
-  command: rpm -ivh --nodeps acc.rpm
-  become: yes  
+  become: yes
+  shell: |
+    RPM=/root/acc.rpm
+    PACKAGE=$(rpm -qp $RPM)
+    if [ ! $(rpm -q $PACKAGE) ]; then
+      rpm -ivh --nodeps $RPM
+    fi
   tags:
     - acc

@@ -6,3 +6,9 @@
   become: yes
   tags:
   - nginx
+
+- name: Set NGINX service state
+  service: name=nginx.service enabled=yes state=started
+  become: yes
+  tags:
+    - nginx
