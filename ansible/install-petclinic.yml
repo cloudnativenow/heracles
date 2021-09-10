@@ -28,3 +28,10 @@
 
   roles:
     - nginx
+
+- name: Install Load Generator
+  hosts: control
+  remote_user: ec2-user
+
+  roles:
+    - loadgenerator    
