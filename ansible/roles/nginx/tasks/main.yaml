@@ -12,3 +12,25 @@
   become: yes
   tags:
     - nginx
+
+- name: Configure NGINX
+  shell: |
+    SERVERS={{servers}}
+    #!/bin/sh
+    {
+    echo 'upstream backend {'
+    echo '  # ip_hash;'
+    for i in $SERVERS; do
+    echo ' ' server $i:8080;
+    done
+    echo '}'
+    echo 'server {'
+    echo '  listen 8080;'
+    echo '  location / {'
+    echo '    proxy_pass http://backend;'
+    echo '  }'
+    echo '}'
+    } > /etc/nginx/conf.d/load-balancer.conf
+  become: yes
+  tags:
+    - nginx    
