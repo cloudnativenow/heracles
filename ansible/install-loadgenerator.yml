@@ -1,0 +1,9 @@
+---
+# This playbook installs the loadgenerator stack for this site.
+
+- name: Install Control
+  hosts: control
+  remote_user: ec2-user
+
+  roles:
+    - loadgenerator

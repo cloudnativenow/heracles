@@ -1,0 +1,17 @@
+
+---
+# This playbook installs the loadgenerator
+
+- name: Install Docker
+  yum: name={{ item }} state=present
+  with_items:
+   - docker
+  become: yes
+  tags:
+    - loadgenerator
+
+- name: Setting Docker service state
+  service: name=docker enabled=yes state=started
+  become: yes
+  tags:
+    - loadgenerator

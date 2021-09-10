@@ -1,0 +1,20 @@
+
+---
+# This playbook installs the ServiceNow MID Server
+
+- name: Download MID software
+  become: yes 
+  command: wget --progress=bar:force --no-check-certificate {{mid_url}} -O /root/mid.rpm
+  tags:
+    - midserver
+
+- name: Install MID software
+  become: yes
+  shell: |
+    RPM=/root/mid.rpm
+    PACKAGE=$(rpm -qp $RPM)
+    if [ ! $(rpm -q $PACKAGE) ]; then
+      rpm -ivh --nodeps $RPM
+    fi
+  tags:
+    - midserver

@@ -28,24 +28,3 @@
 
   roles:
     - nginx
-
-- name: Install Control
-  hosts: control
-  remote_user: ec2-user
-
-  roles:
-    - control
-
-- name: Install Filebeat
-  hosts: nginx, spring, mysql
-  remote_user: ec2-user
-
-  roles:
-    - filebeat
-
-- name: Install ServiceNow ACC
-  hosts: nginx, spring, mysql
-  remote_user: ec2-user
-
-  roles:
-    - acc 
