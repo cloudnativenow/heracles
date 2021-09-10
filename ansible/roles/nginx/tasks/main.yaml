@@ -7,21 +7,14 @@
   tags:
   - nginx
 
-- name: Set NGINX service state
-  service: name=nginx.service enabled=yes state=started
-  become: yes
-  tags:
-    - nginx
-
 - name: Configure NGINX
   shell: |
-    SERVERS={{servers}}
     #!/bin/sh
     {
     echo 'upstream backend {'
     echo '  # ip_hash;'
-    for i in $SERVERS; do
-    echo ' ' server $i:8080;
+    for i in {{servers}}; do
+    echo '  'server $i:8080';'
     done
     echo '}'
     echo 'server {'
@@ -31,6 +24,12 @@
     echo '  }'
     echo '}'
     } > /etc/nginx/conf.d/load-balancer.conf
+  become: yes
+  tags:
+    - nginx
+
+- name: Set NGINX service state
+  service: name=nginx.service enabled=yes state=started
   become: yes
   tags:
     - nginx    
