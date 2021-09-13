@@ -8,9 +8,30 @@
   roles:
     - acc
 
-- name: Install Filebeat
+- name: Install Filebeat Common
   hosts: nginx, spring, mysql
   remote_user: ec2-user
 
   roles:
     - filebeat-common
+
+- name: Install Filebeat for NGINX
+  hosts: nginx
+  remote_user: ec2-user
+
+  roles:
+    - filebeat-nginx
+
+- name: Install Filebeat for Spring
+  hosts: spring
+  remote_user: ec2-user
+
+  roles:
+    - filebeat-spring
+
+- name: Install Filebeat for MySQL
+  hosts: mysql
+  remote_user: ec2-user
+
+  roles:
+    - filebeat-mysql    
