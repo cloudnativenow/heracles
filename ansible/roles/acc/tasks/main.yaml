@@ -45,6 +45,5 @@
     # Enable & Run Service
     systemctl enable acc
     systemctl restart acc
-
   tags:
     - acc

@@ -3,13 +3,13 @@
 # This playbook installs the ServiceNow MID Server
 
 - name: Create MID User Account
+  become: yes
   shell: |
     # Create MID User
     useradd -c "midserver" midserver -U -m -s /bin/bash
     # Add MID User to wheel
     usermod -aG wheel midserver
 
-  become: yes
   tags:
     - midserver
 

@@ -1,0 +1,59 @@
+---
+# This playbook installs filebeat software
+
+- name: Configure Filebeat for NGINX
+  become: yes
+  shell: |
+    # Configure Filebeat
+    cat << EOF > /etc/filebeat/filebeat.yml
+    filebeat.inputs:
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/nginx/error.log
+      fields:
+        sn-application: Pet Clinic
+        sn-service: nginx
+        sn-sourcetype: nginx-error
+      ignore_older: 6h
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/nginx/access.log
+      fields:
+        sn-application: Pet Clinic
+        sn-service: nginx
+        sn-sourcetype: nginx-access
+      ignore_older: 6h
+    output.logstash:
+      enabled: true
+      slow_start: true
+      #to stream over ssl with custom mid certificate please uncomment the following line:
+      #ssl.certificate_authorities: ["PATH_TO_CERTIFICATE_AUTHORITY"]
+      ssl.enabled: true
+      #to stream over ssl with custom mid certificate please comment out the following line:
+      ssl.verification_mode: "none"
+      hosts: ["{{nginx_logstash}}"]
+    EOF
+
+    # Restart Filebeat
+    systemctl restart filebeat
+    
+  tags:
+    - filebeat-nginx
+
+- name: Install Filebeat
+  yum: name={{ item }} state=present
+  with_items:
+   - filebeat
+  become: yes
+  tags:
+    - filebeat-nginx
+
+- name: Set Filebeat service stateso
+  service: name=filebeat enabled=yes state=started
+  become: yes
+  tags:
+    - filebeat-nginx
+
+# - name: Configure FILEBEAT software @TODO  

@@ -2,12 +2,13 @@
 # This playbook contains common plays that will be run on all nginx nodes.
 
 - name: Install NGINX
-  command: amazon-linux-extras install nginx1 -y
   become: yes
+  command: amazon-linux-extras install nginx1 -y
   tags:
   - nginx
 
 - name: Configure NGINX
+  become: yes
   shell: |
     #!/bin/sh
     {
@@ -24,12 +25,12 @@
     echo '  }'
     echo '}'
     } > /etc/nginx/conf.d/load-balancer.conf
-  become: yes
+
   tags:
     - nginx
 
 - name: Set NGINX service state
-  service: name=nginx.service enabled=yes state=started
   become: yes
+  service: name=nginx.service enabled=yes state=started
   tags:
     - nginx    

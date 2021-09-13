@@ -2,38 +2,39 @@
 # This playbook installs MySQL
 
 - name: Install MySQL
+  become: yes
   yum: name={{ item }} state=present
   with_items:
    - mariadb-server
-  become: yes
   tags:
     - mysql  
 
 - name: Set MariaDB service state
-  service: name=mariadb enabled=yes state=started
   become: yes
+  service: name=mariadb enabled=yes state=started
   tags:
     - mysql
    
 - name: Install PyMySQL
+  become: yes
   pip:
     name: pymysql
     state: present
-  become: yes
   tags:
     - mysql      
 
 - name: Configure Logging Properties
+  become: yes
   community.mysql.mysql_query:
     query:
     - SET GLOBAL general_log = 'ON';
     - SET GLOBAL general_log_file = '/var/log/mariadb/all.log';
     single_transaction: yes
-  become: yes
   tags:
     - mysql
 
 - name: Configure PetClinic Database
+  become: yes
   community.mysql.mysql_query:
     query:
     - CREATE DATABASE IF NOT EXISTS petclinic;
@@ -41,6 +42,5 @@
     - GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'%' IDENTIFIED BY 'petclinic';
     - FLUSH PRIVILEGES;
     single_transaction: yes
-  become: yes
   tags:
     - mysql  

@@ -13,4 +13,4 @@
   remote_user: ec2-user
 
   roles:
-    - filebeat
+    - filebeat-common

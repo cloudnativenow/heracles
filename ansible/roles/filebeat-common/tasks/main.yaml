@@ -2,6 +2,7 @@
 # This playbook installs filebeat software
 
 - name: Install Filebeat Repo
+  become: yes
   shell: |
     cat <<EOF | sudo tee /etc/yum.repos.d/elasticsearch.repo
     [elastic-7.x]
@@ -13,22 +14,22 @@
     autorefresh=1
     type=rpm-md
     EOF
-  become: yes
+    
   tags:
-    - filebeat
+    - filebeat-common
 
 - name: Install Filebeat
+  become: yes
   yum: name={{ item }} state=present
   with_items:
-   - filebeat
-  become: yes
+    - filebeat
   tags:
-    - filebeat  
+    - filebeat-common
 
 - name: Set Filebeat service state
-  service: name=filebeat enabled=yes state=started
   become: yes
+  service: name=filebeat enabled=yes state=started
   tags:
-    - filebeat
+    - filebeat-common
 
 # - name: Configure FILEBEAT software @TODO  

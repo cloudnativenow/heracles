@@ -3,20 +3,21 @@
 # This playbook installs the loadgenerator
 
 - name: Install Docker
+  become: yes
   yum: name={{ item }} state=present
   with_items:
    - docker
-  become: yes
   tags:
     - loadgenerator
 
 - name: Setting Docker service state
-  service: name=docker enabled=yes state=started
   become: yes
+  service: name=docker enabled=yes state=started
   tags:
     - loadgenerator
 
 - name: Configure Load Generator Service
+  become: yes
   shell: |
     # Configure Service Variables
     FRONTEND_ADDR={{frontend_addr}}
@@ -58,7 +59,6 @@
     systemctl enable hypnos
     systemctl daemon-reload
     systemctl restart hypnos
-
-  become: yes
+  
   tags:
     - loadgenerator

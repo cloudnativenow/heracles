@@ -2,21 +2,23 @@
 # This playbook contains common plays that will be run on all spring nodes.
 
 - name: Install Java OpenJDK 11
-  command: amazon-linux-extras install java-openjdk11 -y
   become: yes
+  command: amazon-linux-extras install java-openjdk11 -y
   tags:
     - spring
 
 - name: Download Pet Clinic
+  become: yes
   shell: |
     GITHUB_TOKEN={{github_token}}
     ARCHIVE_DOWNLOAD_URL=$(curl -Ls "https://api.github.com/repos/pangealab/castor/actions/artifacts" | jq -r .artifacts[0].archive_download_url)
     wget --header="Authorization: Bearer $GITHUB_TOKEN" -qO- $ARCHIVE_DOWNLOAD_URL | zcat > /root/app.jar
-  become: yes
+
   tags:
     - download
 
 - name: Configure Pet Service Service
+  become: yes
   shell: |
     # Configure Service Variables
     cat <<-EOF > /etc/default/petclinic
@@ -50,6 +52,5 @@
     systemctl daemon-reload
     systemctl restart petclinic
 
-  become: yes
   tags:
     - download
