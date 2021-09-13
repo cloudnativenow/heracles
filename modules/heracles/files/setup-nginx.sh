@@ -53,6 +53,12 @@ cwlogs = cwlogs
 region = ${region}
 EOF
 
+# Configure Prompt
+sudo cat > /etc/bashrc <<- EOF
+# Configure Prompt
+PS1="[nginx][\u@\h \W]\\$ "
+EOF
+
 # Start the awslogsd service, also start on reboot.
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service

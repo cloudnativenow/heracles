@@ -57,3 +57,9 @@ EOF
 # NOTE: Errors go to /var/log/awslogs.log
 systemctl enable awslogsd.service
 systemctl start awslogsd
+
+# Configure Prompt
+sudo cat > /etc/bashrc <<- EOF
+# Configure Prompt
+PS1="[control][\u@\h \W]\\$ "
+EOF

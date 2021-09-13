@@ -5,6 +5,7 @@ data "template_file" "setup-spring" {
     availability_zone = "${data.aws_availability_zones.azs.names[0]}"
     log_stream_name = "${var.cluster_id}-spring"
     region = "${var.region}"
+    index = "${count.index + 1}"
   }
 }
 
