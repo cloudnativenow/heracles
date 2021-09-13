@@ -12,8 +12,10 @@
   shell: |
     RPM=/root/acc.rpm
     PACKAGE=$(rpm -qp $RPM)
-    if [ ! $(rpm -q $PACKAGE) ]; then
+    if [[ ! $( rpm -qa $PACKAGE ) =~ ${PACKAGE} ]]
+    then
       rpm -ivh --nodeps $RPM
     fi
+    
   tags:
     - acc
