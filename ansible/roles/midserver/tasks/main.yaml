@@ -24,9 +24,11 @@
   shell: |
     RPM=/root/mid.rpm
     PACKAGE=$(rpm -qp $RPM)
-    if [[ ! $( rpm -qa $PACKAGE ) =~ ${PACKAGE} ]]
-    then
-      rpm -ivh --nodeps $RPM
+    if [ $(rpm -q $PACKAGE) ]; then
+      echo " Package $PACKAGE is installed."
+    else
+      echo "Package $PACKAGE not found."
+      # rpm -ivh --nodeps $RPM
     fi
   
   tags:

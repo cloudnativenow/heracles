@@ -12,10 +12,39 @@
   shell: |
     RPM=/root/acc.rpm
     PACKAGE=$(rpm -qp $RPM)
-    if [[ ! $( rpm -qa $PACKAGE ) =~ ${PACKAGE} ]]
-    then
+    if [ $(rpm -q $PACKAGE) ]; then
+      echo " Package $PACKAGE is installed."
+    else
+      echo "Package $PACKAGE not found."
       rpm -ivh --nodeps $RPM
     fi
     
+  tags:
+    - acc
+
+- name: Configure ACC Server
+  become: yes
+  shell: |
+    # Configure Agent
+    ACC_MID={{acc_mid}}
+    ACC_API_KEY={{acc_api_key}}
+    ACC_HOME=/etc/servicenow/agent-client-collector
+    ACC_CONFIG=$ACC_HOME/acc.yml
+    ACC_SAMPLE=$ACC_HOME/acc.yml.example
+    ACC_CHECK=$ACC_HOME/check-allow-list.json
+    ACC_SENSU=$ACC_HOME/check-allow-list.json.default
+    cp $ACC_SAMPLE $ACC_CONFIG
+    cp $ACC_SENSU $ACC_CHECK
+    sed "s+wss://127.0.0.1:8800/ws/events+$ACC_MID+g" -i $ACC_CONFIG
+    sed "s/api-key: \"\"/api-key: \"$ACC_API_KEY\"/g" -i $ACC_CONFIG
+
+    # Set Permissions
+    chown -R servicenow:servicenow $ACC_HOME
+    chmod -R 775 $ACC_HOME
+
+    # Enable & Run Service
+    systemctl enable acc
+    systemctl restart acc
+
   tags:
     - acc

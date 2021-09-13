@@ -19,6 +19,9 @@
 - name: Configure Load Generator Service
   shell: |
     # Configure Service Variables
+    FRONTEND_ADDR={{frontend_addr}}
+    USERS=10
+    
     cat <<-EOF > /etc/default/hypnos
     # /etc/default/hypnos    
     FRONTEND_ADDR={{frontend_addr}}
