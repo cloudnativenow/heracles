@@ -15,3 +15,47 @@
   become: yes
   tags:
     - loadgenerator
+
+- name: Configure Load Generator Service
+  shell: |
+    # Configure Service Variables
+    cat <<-EOF > /etc/default/hypnos
+    # /etc/default/hypnos    
+    FRONTEND_ADDR={{frontend_addr}}
+    USERS=10
+    EOF
+
+    # Source Variables
+    source /etc/default/hypnos
+
+    # Configure Service
+    cat << EOF > /etc/systemd/system/hypnos.service
+    # /etc/systemd/system/hypnos.service
+    [Unit]
+    Description=Hypnos Locust Service
+    After=docker.service
+    Requires=docker.service
+    [Service]
+    EnvironmentFile=/etc/default/hypnos
+    TimeoutStartSec=0
+    Restart=always
+    ExecStartPre=-/usr/bin/docker kill %n
+    ExecStartPre=/usr/bin/docker pull pangealab/hypnos:latest
+    ExecStart=/usr/bin/docker run --rm --name %n \
+        -e FRONTEND_ADDR=$FRONTEND_ADDR \
+        -e USERS=$USERS \
+        -p 80:80 \
+        pangealab/hypnos:latest
+    ExecStop=/usr/bin/docker kill %n
+    [Install]
+    WantedBy=multi-user.target
+    EOF
+
+    # Enable & Run Service
+    systemctl enable hypnos
+    systemctl daemon-reload
+    systemctl restart hypnos
+
+  become: yes
+  tags:
+    - loadgenerator
