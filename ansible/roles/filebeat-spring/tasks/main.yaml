@@ -1,0 +1,46 @@
+---
+# This playbook installs filebeat software
+
+- name: Configure Filebeat for Spring
+  become: yes
+  shell: |
+    # Configure Filebeat
+    cat << EOF > /etc/filebeat/filebeat.yml
+    filebeat.inputs:
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/spring.log
+      fields:
+        sn-application: Pet Clinic
+        sn-service: spring
+        sn-sourcetype: spring-app
+      ignore_older: 6h
+      multiline.pattern: ^\d{4}
+      multiline.negate: true
+      multiline.match: after
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/access_log*
+      fields:
+        sn-application: Pet Clinic
+        sn-service: spring
+        sn-sourcetype: spring-access
+      ignore_older: 6h
+    output.logstash:
+      enabled: true
+      slow_start: true
+      #to stream over ssl with custom mid certificate please uncomment the following line:
+      #ssl.certificate_authorities: ["PATH_TO_CERTIFICATE_AUTHORITY"]
+      ssl.enabled: true
+      #to stream over ssl with custom mid certificate please comment out the following line:
+      ssl.verification_mode: "none"
+      hosts: ["{{spring_logstash}}"]
+    EOF
+
+    # Restart Filebeat
+    systemctl restart filebeat
+    
+  tags:
+    - filebeat-spring
