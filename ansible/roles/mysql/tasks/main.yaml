@@ -25,13 +25,39 @@
 
 - name: Configure Logging Properties
   become: yes
-  community.mysql.mysql_query:
-    query:
-    - SET GLOBAL general_log = 'ON';
-    - SET GLOBAL general_log_file = '/var/log/mariadb/all.log';
-    single_transaction: yes
+  shell: |
+    # Set Logging Properties
+    mkdir -p /etc/my.cnf.d
+    cat <<-EOF > /etc/my.cnf.d/my.cnf
+    [mysqld]
+    general_log_file = /var/log/mariadb/all.log
+    general_log = 1
+    EOF
+
+    # Restart MySQL
+    systemctl daemon-reload
+    systemctl restart mariadb
+
   tags:
     - mysql
+
+- name: Unset Limits
+  become: yes
+  shell: |
+    # Unset Limits
+    mkdir -p /etc/systemd/system/mariadb.service.d
+    cat <<-EOF > /etc/systemd/system/mariadb.service.d/limits.conf  
+    [Service]
+    LimitNOFILE=infinite
+    EOF
+
+    # Restart MySQL
+    systemctl daemon-reload
+    systemctl restart mariadb
+
+  tags:
+    - mysql
+    
 
 - name: Configure PetClinic Database
   become: yes
