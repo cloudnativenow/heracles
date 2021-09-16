@@ -25,6 +25,15 @@
         sn-service: nginx
         sn-sourcetype: nginx-access
       ignore_older: 6h
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/messages
+      fields:
+        sn-application: Pet Clinic
+        sn-service: syslog
+        sn-sourcetype: syslog-messages
+      ignore_older: 6h      
     output.logstash:
       enabled: true
       slow_start: true

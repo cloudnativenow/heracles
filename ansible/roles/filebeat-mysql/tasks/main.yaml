@@ -24,7 +24,16 @@
         sn-application: Pet Clinic
         sn-service: mysql
         sn-sourcetype: mariadb-sql
-      ignore_older: 6h  
+      ignore_older: 6h
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/messages
+      fields:
+        sn-application: Pet Clinic
+        sn-service: syslog
+        sn-sourcetype: syslog-messages
+      ignore_older: 6h        
     output.logstash:
       enabled: true
       slow_start: true
