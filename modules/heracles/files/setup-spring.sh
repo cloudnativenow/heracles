@@ -56,7 +56,7 @@ EOF
 # Configure Prompt
 sudo cat > /etc/bashrc <<- EOF
 # Configure Prompt
-PS1="[control${index}][\u@\h \W]\\$ "
+PS1="[spring${index}][\u@\h \W]\\$ "
 EOF
 
 # Start the awslogsd service, also start on reboot.

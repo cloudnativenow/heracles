@@ -1,11 +1,12 @@
 //  Create the spring userdata script.
 data "template_file" "setup-spring" {
+  count = var.instance_count
   template = file("${path.module}/files/setup-spring.sh")
   vars = {
     availability_zone = "${data.aws_availability_zones.azs.names[0]}"
     log_stream_name = "${var.cluster_id}-spring"
     region = "${var.region}"
-    index = "${count.index + 1}"
+    index = count.index + 1
   }
 }
 
@@ -30,7 +31,8 @@ resource "aws_instance" "spring" {
   instance_type        = var.amisize
   subnet_id            = aws_subnet.public-subnet.id
   iam_instance_profile = aws_iam_instance_profile.heracles-spring-instance-profile.id
-  user_data            = data.template_file.setup-spring.rendered
+  # user_data          = data.template_file.setup-spring.rendered
+  user_data            = element(data.template_file.setup-spring.*.rendered,count.index)
 
   vpc_security_group_ids = [
     aws_security_group.heracles-vpc.id,
