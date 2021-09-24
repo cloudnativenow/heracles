@@ -33,4 +33,12 @@
   become: yes
   service: name=nginx.service enabled=yes state=started
   tags:
-    - nginx    
+    - nginx
+
+- name: Patch NGINX Logrotate
+  become: yes
+  shell: |
+    # Configure Logrotate
+    sed "s/-USR1/-HUP/g" -i /etc/logrotate.d/nginx
+  tags:
+    - nginx
