@@ -28,7 +28,7 @@
       echo " Package $PACKAGE is installed."
     else
       echo "Package $PACKAGE not found."
-      # rpm -ivh --nodeps $RPM
+      rpm -ivh --nodeps $RPM
     fi
   
   tags:
