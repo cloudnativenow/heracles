@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2021-10-01 00:42:34">
+<sn_occ_features action="INSERT_OR_UPDATE">
+<default_state>0</default_state>
+<description>When on, detections of type AnomalyDetection for metrics of type AllEventsMetric will be accepted. Default is OFF</description>
+<feature_type>2</feature_type>
+<internal_name>DISABLE_ALL_EVENTS_METRIC_ANOMALY_DETECTIONS_RULE</internal_name>
+<name>Disable All Events Metric Anomaly Detections Rule</name>
+<state>1</state>
+<sys_class_name>sn_occ_features</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-04-05 07:10:06</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_id>b6435ee4b74c10106fa36196ce11a941</sys_id>
+<sys_mod_count>8</sys_mod_count>
+<sys_name>Disable All Events Metric Anomaly Detections Rule</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Health Log Analytics" source="sn_occ">80fae9692b1c0200c5233f74b4da1524</sys_package>
+<sys_policy/>
+<sys_scope display_value="Health Log Analytics">80fae9692b1c0200c5233f74b4da1524</sys_scope>
+<sys_update_name>sn_occ_features_b6435ee4b74c10106fa36196ce11a941</sys_update_name>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-09-02 14:19:35</sys_updated_on>
+</sn_occ_features>
+<sn_occ_features action="INSERT_OR_UPDATE">
+<default_state>0</default_state>
+<description>When off, this rule will reject all detections within 'rules.setup_time.period_minutes' (default is 2 hours) from the creation of the source. Default is OFF</description>
+<feature_type>2</feature_type>
+<internal_name>DISABLE_SETUP_TIME_RULE</internal_name>
+<name>Disable Setup Time Rule</name>
+<state>1</state>
+<sys_class_name>sn_occ_features</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-04-05 07:10:06</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_id>fe435ee4b74c10106fa36196ce11a91d</sys_id>
+<sys_mod_count>10</sys_mod_count>
+<sys_name>Disable Setup Time Rule</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Health Log Analytics" source="sn_occ">80fae9692b1c0200c5233f74b4da1524</sys_package>
+<sys_policy/>
+<sys_scope display_value="Health Log Analytics">80fae9692b1c0200c5233f74b4da1524</sys_scope>
+<sys_update_name>sn_occ_features_fe435ee4b74c10106fa36196ce11a91d</sys_update_name>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-09-02 14:16:25</sys_updated_on>
+</sn_occ_features>
+<sn_occ_features action="INSERT_OR_UPDATE">
+<default_state>0</default_state>
+<description>Skip learning-period for new metrics and log lines. When off, this rule will reject detections for a metric if less than 24 hours (source-time) have passed since the creating of the metric. Default is OFF</description>
+<feature_type>1</feature_type>
+<internal_name>DISABLE_WARM_UP_TIME_RULE</internal_name>
+<name>Disable Warm Up Time Rule</name>
+<state>1</state>
+<sys_class_name>sn_occ_features</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-04-05 07:10:06</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_id>3e435ee4b74c10106fa36196ce11a914</sys_id>
+<sys_mod_count>10</sys_mod_count>
+<sys_name>Disable Warm Up Time Rule</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Health Log Analytics" source="sn_occ">80fae9692b1c0200c5233f74b4da1524</sys_package>
+<sys_policy/>
+<sys_scope display_value="Health Log Analytics">80fae9692b1c0200c5233f74b4da1524</sys_scope>
+<sys_update_name>sn_occ_features_3e435ee4b74c10106fa36196ce11a914</sys_update_name>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-09-02 14:14:51</sys_updated_on>
+</sn_occ_features>
+</unload>
