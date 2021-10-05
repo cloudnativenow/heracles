@@ -46,6 +46,13 @@
       #to stream over ssl with custom mid certificate please comment out the following line:
       ssl.verification_mode: "none"
       hosts: ["{{spring_logstash}}"]
+    logging.level: info
+    logging.to_files: true
+    logging.files:
+      path: /var/log/filebeat
+      name: filebeat
+      keepfiles: 7
+      permissions: 0644      
     EOF
 
     # Restart Filebeat
