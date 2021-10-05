@@ -54,3 +54,17 @@
 
   tags:
     - download
+
+- name: Remove Java Logs from Syslog
+  become: yes
+  shell: |
+    # Remove Java Logs from Syslog
+    cat <<-EOF > /etc/rsyslog.d/10-loom.conf
+    ### Drop java logs from syslog ###
+    :programname, isequal, "java" ~
+
+    # Enable & Run Service
+    systemctl restart rsyslog
+
+  tags:
+    - download    
