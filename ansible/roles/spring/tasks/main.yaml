@@ -62,6 +62,7 @@
     cat <<-EOF > /etc/rsyslog.d/10-loom.conf
     ### Drop java logs from syslog ###
     :programname, isequal, "java" ~
+    EOF
 
     # Enable & Run Service
     systemctl restart rsyslog
