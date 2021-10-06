@@ -5,6 +5,7 @@ author:
 - Anthony Angelo, Netser Heruty, Daniel Smith
 date: 5 Oct 2021
 ---
+
 # Introduction
 
 This document provides prescriptive guidance for using installing the HLA Workshop
@@ -23,8 +24,24 @@ Following is a list of prerequisite tools and accesses needed to perform a full 
 
 ## Request a new NOW Instance
 
+1. Navigate to [NOW HI] (https://support.servicenow.com/now)
+2. Search for "new internal instance request"
+3. Request a new instance as follows, using the latest available application version:![Figure 1](new-internal-instance-request.png)
 
-1. Navigate to NOW HI [https://support.servicenow.com/now](https://support.servicenow.com/now)
-1. Search for "new internal instance request"
-1. Request a new instance as follows, using the latest available application version:
-![Figure 1](new-internal-instance-request.png)
+## Upgrade your NOW Instance to latest Rome version
+
+1. Navigate to [NOW HI] (https://support.servicenow.com/now)
+2. Select your Instance from the Instances Dashboard
+3. Upgrade your instance to latest Rome version & patch level as follows:![Figure 2](upgrade-to-rome.png)
+
+## Install the required ITOM plugins for the Workshop
+
+1. Login to your NOW Instance as an Administrator
+2. Navigate to the**System Definition > Plugins** and install the following plugins
+
+|  Plugin Name  |  Plugin ID | Notes |
+| --------------- | ----------- | ------- |
+| Agent Client Collector Monitoring | com.snc.sa.metric | 10 Minutes to install |
+| Service Mapping | com.snc.service-mapping | 20 Minutes to install |
+
+
