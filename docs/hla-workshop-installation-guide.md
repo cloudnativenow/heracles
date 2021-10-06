@@ -8,7 +8,7 @@ date: 5 Oct 2021
 
 # Introduction
 
-This document provides prescriptive guidance for using installing the HLA Workshop
+This document provides prescriptive guidance for deploying the HLA Workshop
 
 # Prerequisites
 
@@ -37,11 +37,15 @@ Following is a list of prerequisite tools and accesses needed to perform a full 
 ## Install the required ITOM plugins for the Workshop
 
 1. Login to your NOW Instance as an Administrator
-2. Navigate to the **System Definition > Plugins** and install the following plugins
+1. Navigate to the **System Definition > Plugins** and install the following plugins:
 
-|  Plugin Name  |  Plugin ID | Notes |
-| ------------- | ---------- | ----- |
-| Agent Client Collector Monitoring | com.snc.sa.metric | 10 Minutes to install |
-| Service Mapping | com.snc.service-mapping | 20 Minutes to install |
+    |  Plugin Name  |  Plugin ID | Notes |
+    | ------------- | ---------- | ----- |
+    | Agent Client Collector Monitoring | com.snc.sa.metric | 10 Minutes to install |
+    | Service Mapping | com.snc.service-mapping | 20 Minutes to install |
 
+## Install the HLA stack for your NOW Instance
 
+1. Follow the [HLA Installation Guide](https://servicenow.sharepoint.com/:w:/s/itxamssc/EZUQY9F095VEmHuA0A4Od2cBEkjRbiVo8oWMLARC5HfjVg?e=iGEcKR) for the latest installation steps
+
+    > NOTE: Please read and follow all the steps carefully as instructed in the "HLA Installation Guide" document as it us updated frequently by the HLA Development Team
