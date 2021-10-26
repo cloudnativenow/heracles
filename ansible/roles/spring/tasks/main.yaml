@@ -1,6 +1,20 @@
 ---
 # This playbook contains common plays that will be run on all spring nodes.
 
+- name: Install EPEL Repository
+  command: amazon-linux-extras install epel
+  become: yes
+  tags:
+    - spring
+
+- name: Install Common Tools
+  yum: name={{ item }} state=present
+  with_items:
+    - stress
+  become: yes
+  tags:
+    - spring
+
 - name: Install Java OpenJDK 11
   become: yes
   command: amazon-linux-extras install java-openjdk11 -y

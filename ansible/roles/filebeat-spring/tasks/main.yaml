@@ -36,7 +36,7 @@
         sn-application: Pet Clinic
         sn-service: syslog
         sn-sourcetype: syslog-messages
-      ignore_older: 6h        
+      ignore_older: 6h
     output.logstash:
       enabled: true
       slow_start: true
@@ -47,12 +47,12 @@
       ssl.verification_mode: "none"
       hosts: ["{{spring_logstash}}"]
     logging.level: info
-    logging.to_files: true  
+    logging.to_files: true
     logging.files:
       path: /var/log/filebeat
       name: filebeat.log
       keepfiles: 7
-      permissions: 0644      
+      permissions: 0644
     EOF
 
     # Restart Filebeat

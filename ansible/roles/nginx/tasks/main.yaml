@@ -1,6 +1,20 @@
 ---
 # This playbook contains common plays that will be run on all nginx nodes.
 
+- name: Install EPEL Repository
+  command: amazon-linux-extras install epel
+  become: yes
+  tags:
+  - nginx
+
+- name: Install Common Tools
+  yum: name={{ item }} state=present
+  with_items:
+   - stress
+  become: yes
+  tags:
+  - nginx
+
 - name: Install NGINX
   become: yes
   command: amazon-linux-extras install nginx1 -y
