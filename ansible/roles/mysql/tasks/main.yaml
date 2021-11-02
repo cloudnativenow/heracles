@@ -2,7 +2,7 @@
 # This playbook installs MySQL
 
 - name: Install EPEL Repository
-  command: amazon-linux-extras install epel
+  command: amazon-linux-extras install epel -y
   become: yes
   tags:
     - mysql
