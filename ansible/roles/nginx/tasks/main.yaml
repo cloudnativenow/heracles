@@ -2,7 +2,7 @@
 # This playbook contains common plays that will be run on all nginx nodes.
 
 - name: Install EPEL Repository
-  command: amazon-linux-extras install epel
+  command: amazon-linux-extras install epel -y
   become: yes
   tags:
   - nginx
