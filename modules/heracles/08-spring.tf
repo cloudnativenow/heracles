@@ -37,7 +37,6 @@ resource "aws_instance" "spring" {
   vpc_security_group_ids = [
     aws_security_group.heracles-vpc.id,
     aws_security_group.heracles-ssh.id,    
-    aws_security_group.heracles-public-ingress.id,
     aws_security_group.heracles-public-egress.id,
   ]
 
