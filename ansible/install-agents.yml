@@ -3,6 +3,7 @@
 
 - name: Install ServiceNow ACC
   hosts: nginx, spring, mysql
+  remote_user: ec2-user
   become: yes
 
   roles:
@@ -10,6 +11,7 @@
 
 - name: Install Filebeat Common
   hosts: nginx, spring, mysql
+  remote_user: ec2-user
   become: yes
 
   roles:
@@ -17,6 +19,7 @@
 
 - name: Install Filebeat for NGINX
   hosts: nginx
+  remote_user: ec2-user
   become: yes
 
   roles:
@@ -24,6 +27,7 @@
 
 - name: Install Filebeat for Spring
   hosts: spring
+  remote_user: ec2-user
   become: yes
 
   roles:
@@ -31,6 +35,7 @@
 
 - name: Install Filebeat for MySQL
   hosts: mysql
+  remote_user: ec2-user
   become: yes
 
   roles:
