@@ -42,8 +42,22 @@
     chown -R servicenow:servicenow $ACC_HOME
     chmod -R 775 $ACC_HOME
 
+    # Permit ACC to read logs
+    setfacl -R -m g:servicenow:r-x /var/log
+
+    # Allow ServiceNow to sudo
+    cat << EOF > /etc/pam.d/sudo
+    #%PAM-1.0
+    auth       sufficient   pam_permit.so
+    auth       include      system-auth
+    account    include      system-auth
+    password   include      system-auth
+    session    optional     pam_keyinit.so revoke
+    session    include      system-auth
+    EOF
+
     # Enable & Run Service
     systemctl enable acc
     systemctl restart acc
   tags:
-    - acc
+    - acc  
