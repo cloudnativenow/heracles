@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2021-12-12 14:36:15">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>Custom ACC-L Policies</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>c3980c8387148950fbe710683cbb3596</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:14</sys_created_on>
+<sys_id>4ccc88c787148950fbe710683cbb35aa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:14</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_check_param_9ff9800787148950fbe710683cbb3566</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_agent_check_param"><sn_agent_check_param action="INSERT_OR_UPDATE"><active>true</active><check display_value="log shipper">6d0980c387148950fbe710683cbb35e8</check><description/><flag>-l2</flag><is_draft>true</is_draft><label/><mandatory>true</mandatory><name>log2</name><order>2</order><published_param/><published_parent/><script/><sys_class_name>sn_agent_check_param</sys_class_name><sys_created_by>netser</sys_created_by><sys_created_on>2021-12-12 14:24:10</sys_created_on><sys_domain>global</sys_domain><sys_id>9ff9800787148950fbe710683cbb3566</sys_id><sys_mod_count>0</sys_mod_count><sys_name>-l2</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_agent_check_param_9ff9800787148950fbe710683cbb3566</sys_update_name><sys_updated_by>netser</sys_updated_by><sys_updated_on>2021-12-12 14:24:10</sys_updated_on><validation_regex/><value>/var/log/spring.log,spring,spring-app,after,true,^\d{4}</value><value_required>true</value_required></sn_agent_check_param></record_update>]]></payload>
+<payload_hash>-30671697</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>04cc88c787148950fbe710683cbb35ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf079a060000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table/>
+<target_name>-l2</target_name>
+<type>Check Parameter</type>
+<update_domain>global</update_domain>
+<update_guid>dff9480718148950162d3f772ca7c306</update_guid>
+<update_guid_history>dff9480718148950162d3f772ca7c306:-30671697</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_policy_e50980c387148950fbe710683cbb35e6</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_agent_policy"&gt;&lt;sn_agent_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;auto_binding&gt;true&lt;/auto_binding&gt;&lt;check_group/&gt;&lt;checks_str&gt;78f8a221b7f43010ff78dc55ce11a9d4&lt;/checks_str&gt;&lt;cred_alias/&gt;&lt;credential_alias/&gt;&lt;cron_expressions/&gt;&lt;description&gt;This policy collects logs from Spring boot Java App running on Linux (and recognized as Tomcat) and sends them to the MID for further analysis&lt;/description&gt;&lt;filter/&gt;&lt;inherit_from_parent&gt;true&lt;/inherit_from_parent&gt;&lt;interval&gt;60&lt;/interval&gt;&lt;is_cron&gt;false&lt;/is_cron&gt;&lt;is_draft&gt;true&lt;/is_draft&gt;&lt;is_interval&gt;true&lt;/is_interval&gt;&lt;is_service_filter&gt;true&lt;/is_service_filter&gt;&lt;monitored_ci_group&gt;TomcatOnLinux&lt;/monitored_ci_group&gt;&lt;monitored_ci_script&gt;&lt;![CDATA[/*
+      Provide a script to get monitored CI type. 
+      The script returns a GlideRecord containing the chosen table and filter. 
+      Example code: 
+          var monitoredCis = new GlideRecord('cmdb_ci_computer'); 
+         monitoredCis.addQuery('name', 'test'); 
+         monitoredCis.query(); 
+         return monitoredCis; 
+ */
+ 
+ (function getMonitoredCiType(){
+ 
+  
+ })();]]&gt;&lt;/monitored_ci_script&gt;&lt;monitored_ci_type_filter&gt;false&lt;/monitored_ci_type_filter&gt;&lt;monitored_ci_type_group&gt;true&lt;/monitored_ci_type_group&gt;&lt;monitored_ci_type_script&gt;false&lt;/monitored_ci_type_script&gt;&lt;name&gt;Spring Logs (child from Tomcat on Linux)&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;proxy_advanced&gt;false&lt;/proxy_advanced&gt;&lt;proxy_agent/&gt;&lt;proxy_filter/&gt;&lt;proxy_script&gt;&lt;![CDATA[/*  
+The argument currentCiResult is the GlideRecord of the filter defined in the "Monitored Cis" tab
+  The script returns a string containing the chosen proxy agent ID
+ */
+ 
+ (function findProxyAgent(currentCiResult){
+ 
+  
+ })(currentCiResult);]]&gt;&lt;/proxy_script&gt;&lt;proxy_script_advanced&gt;false&lt;/proxy_script_advanced&gt;&lt;publish_status&gt;0&lt;/publish_status&gt;&lt;published_parent display_value="Tomcat on Linux Logs"&gt;1c4335d2b7913010ff78dc55ce11a9b6&lt;/published_parent&gt;&lt;related_policy/&gt;&lt;relationship_state&gt;2&lt;/relationship_state&gt;&lt;service_filter table="cmdb_ci_service_auto"&gt;name=Pet Clinic&lt;item endquery="false" field="name" goto="false" newquery="false" operator="=" or="false" value="Pet Clinic"/&gt;&lt;/service_filter&gt;&lt;single_proxy_agent&gt;false&lt;/single_proxy_agent&gt;&lt;sys_class_name&gt;sn_agent_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;netser&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-12 14:19:57&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;e50980c387148950fbe710683cbb35e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Spring Logs (child from Tomcat on Linux)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_agent_policy_e50980c387148950fbe710683cbb35e6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;netser&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-12 14:22:34&lt;/sys_updated_on&gt;&lt;table&gt;cmdb_ci_computer&lt;/table&gt;&lt;/sn_agent_policy&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1820885367</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>0ccc000b87148950fbe710683cbb3511</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf0621570000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table>cmdb_ci_computer</table>
+<target_name>Spring Logs (child from Tomcat on Linux)</target_name>
+<type>Policy</type>
+<update_domain>global</update_domain>
+<update_guid>37990007cd148950f4fc2ce35c57bf01</update_guid>
+<update_guid_history>37990007cd148950f4fc2ce35c57bf01:-1820885367,eb99ccc3161489502d6abbbb327c98ff:-526566030</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_check_param_583c8c8787148950fbe710683cbb355c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_agent_check_param"><sn_agent_check_param action="INSERT_OR_UPDATE"><active>true</active><check display_value="log shipper">2ccbc48787148950fbe710683cbb35fe</check><description/><flag>-l2</flag><is_draft>true</is_draft><label/><mandatory>true</mandatory><name>log2</name><order>2</order><published_param/><published_parent/><script/><sys_class_name>sn_agent_check_param</sys_class_name><sys_created_by>netser</sys_created_by><sys_created_on>2021-12-12 14:33:48</sys_created_on><sys_domain>global</sys_domain><sys_id>583c8c8787148950fbe710683cbb355c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>-l2</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_agent_check_param_583c8c8787148950fbe710683cbb355c</sys_update_name><sys_updated_by>netser</sys_updated_by><sys_updated_on>2021-12-12 14:33:48</sys_updated_on><validation_regex/><value>/var/log/nginx/error.log,nginx,nginx-error,,,</value><value_required>true</value_required></sn_agent_check_param></record_update>]]></payload>
+<payload_hash>1284295479</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>40cc88c787148950fbe710683cbb35ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf106c1b0000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table/>
+<target_name>-l2</target_name>
+<type>Check Parameter</type>
+<update_domain>global</update_domain>
+<update_guid>1c3c8c872b148950fd0d1a7d9bd43560</update_guid>
+<update_guid_history>1c3c8c872b148950fd0d1a7d9bd43560:1284295479</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_policy_c96cc4c787148950fbe710683cbb35cc</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_agent_policy"&gt;&lt;sn_agent_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;auto_binding&gt;true&lt;/auto_binding&gt;&lt;check_group/&gt;&lt;checks_str&gt;78f8a221b7f43010ff78dc55ce11a9d4&lt;/checks_str&gt;&lt;cred_alias/&gt;&lt;credential_alias/&gt;&lt;cron_expressions/&gt;&lt;description&gt;for Nginx logs on Linux&lt;/description&gt;&lt;filter/&gt;&lt;inherit_from_parent&gt;true&lt;/inherit_from_parent&gt;&lt;interval&gt;60&lt;/interval&gt;&lt;is_cron&gt;false&lt;/is_cron&gt;&lt;is_draft&gt;false&lt;/is_draft&gt;&lt;is_interval&gt;true&lt;/is_interval&gt;&lt;is_service_filter&gt;true&lt;/is_service_filter&gt;&lt;monitored_ci_group/&gt;&lt;monitored_ci_script&gt;&lt;![CDATA[/*
+      Provide a script to get monitored CI type. 
+      The script returns a GlideRecord containing the chosen table and filter. 
+      Example code: 
+          var monitoredCis = new GlideRecord('cmdb_ci_computer'); 
+         monitoredCis.addQuery('name', 'test'); 
+         monitoredCis.query(); 
+         return monitoredCis; 
+ */
+ 
+ (function getMonitoredCiType(){
+ 
+  
+ })();]]&gt;&lt;/monitored_ci_script&gt;&lt;monitored_ci_type_filter&gt;true&lt;/monitored_ci_type_filter&gt;&lt;monitored_ci_type_group&gt;false&lt;/monitored_ci_type_group&gt;&lt;monitored_ci_type_script&gt;false&lt;/monitored_ci_type_script&gt;&lt;name&gt;Nginx Stream Logs&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;proxy_advanced&gt;false&lt;/proxy_advanced&gt;&lt;proxy_agent/&gt;&lt;proxy_filter/&gt;&lt;proxy_script&gt;&lt;![CDATA[/*  
+The argument currentCiResult is the GlideRecord of the filter defined in the "Monitored Cis" tab
+  The script returns a comma-separated string containing the chosen proxy agent IDs
+ */
+ 
+ (function findProxyAgent(currentCiResult){
+ 
+  
+ })(currentCiResult);]]&gt;&lt;/proxy_script&gt;&lt;proxy_script_advanced&gt;false&lt;/proxy_script_advanced&gt;&lt;publish_status&gt;1&lt;/publish_status&gt;&lt;published_parent/&gt;&lt;related_policy/&gt;&lt;relationship_state&gt;0&lt;/relationship_state&gt;&lt;service_filter/&gt;&lt;single_proxy_agent&gt;false&lt;/single_proxy_agent&gt;&lt;sys_class_name&gt;sn_agent_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;netser&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-12 14:34:40&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;c96cc4c787148950fbe710683cbb35cc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Nginx Stream Logs&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_agent_policy_c96cc4c787148950fbe710683cbb35cc&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;netser&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-12 14:34:40&lt;/sys_updated_on&gt;&lt;table&gt;cmdb_ci_nginx_web_server&lt;/table&gt;&lt;/sn_agent_policy&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1161248977</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>48cc000b87148950fbe710683cbb3511</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf1135790000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table>cmdb_ci_nginx_web_server</table>
+<target_name>Nginx Stream Logs</target_name>
+<type>Policy</type>
+<update_domain>global</update_domain>
+<update_guid>8d6cc4c7e414895089e79eab06d422cd</update_guid>
+<update_guid_history>8d6cc4c7e414895089e79eab06d422cd:1161248977</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_policy_c13b404787148950fbe710683cbb353a</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_agent_policy"&gt;&lt;sn_agent_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;auto_binding&gt;true&lt;/auto_binding&gt;&lt;check_group/&gt;&lt;checks_str&gt;78f8a221b7f43010ff78dc55ce11a9d4&lt;/checks_str&gt;&lt;cred_alias/&gt;&lt;credential_alias/&gt;&lt;cron_expressions/&gt;&lt;description&gt;for Nginx logs on Linux&lt;/description&gt;&lt;filter/&gt;&lt;inherit_from_parent&gt;true&lt;/inherit_from_parent&gt;&lt;interval&gt;60&lt;/interval&gt;&lt;is_cron&gt;false&lt;/is_cron&gt;&lt;is_draft&gt;true&lt;/is_draft&gt;&lt;is_interval&gt;true&lt;/is_interval&gt;&lt;is_service_filter&gt;true&lt;/is_service_filter&gt;&lt;monitored_ci_group/&gt;&lt;monitored_ci_script&gt;&lt;![CDATA[/*
+      Provide a script to get monitored CI type. 
+      The script returns a GlideRecord containing the chosen table and filter. 
+      Example code: 
+          var monitoredCis = new GlideRecord('cmdb_ci_computer'); 
+         monitoredCis.addQuery('name', 'test'); 
+         monitoredCis.query(); 
+         return monitoredCis; 
+ */
+ 
+ (function getMonitoredCiType(){
+ 
+  
+ })();]]&gt;&lt;/monitored_ci_script&gt;&lt;monitored_ci_type_filter&gt;true&lt;/monitored_ci_type_filter&gt;&lt;monitored_ci_type_group&gt;false&lt;/monitored_ci_type_group&gt;&lt;monitored_ci_type_script&gt;false&lt;/monitored_ci_type_script&gt;&lt;name&gt;Nginx Stream Logs&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;proxy_advanced&gt;false&lt;/proxy_advanced&gt;&lt;proxy_agent/&gt;&lt;proxy_filter/&gt;&lt;proxy_script&gt;&lt;![CDATA[/*  
+The argument currentCiResult is the GlideRecord of the filter defined in the "Monitored Cis" tab
+  The script returns a comma-separated string containing the chosen proxy agent IDs
+ */
+ 
+ (function findProxyAgent(currentCiResult){
+ 
+  
+ })(currentCiResult);]]&gt;&lt;/proxy_script&gt;&lt;proxy_script_advanced&gt;false&lt;/proxy_script_advanced&gt;&lt;publish_status&gt;0&lt;/publish_status&gt;&lt;published_parent/&gt;&lt;related_policy/&gt;&lt;relationship_state&gt;0&lt;/relationship_state&gt;&lt;service_filter/&gt;&lt;single_proxy_agent&gt;false&lt;/single_proxy_agent&gt;&lt;sys_class_name&gt;sn_agent_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;netser&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-12 14:31:55&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;c13b404787148950fbe710683cbb353a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Nginx Stream Logs&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_agent_policy_c13b404787148950fbe710683cbb353a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;netser&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-12 14:31:55&lt;/sys_updated_on&gt;&lt;table&gt;cmdb_ci_nginx_web_server&lt;/table&gt;&lt;/sn_agent_policy&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1662029783</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>4ccc88c787148950fbe710683cbb35ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf0eb1cb0000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table>cmdb_ci_nginx_web_server</table>
+<target_name>Nginx Stream Logs</target_name>
+<type>Policy</type>
+<update_domain>global</update_domain>
+<update_guid>fccb4c871814895018227e360b19dec3</update_guid>
+<update_guid_history>fccb4c871814895018227e360b19dec3:1662029783</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_check_2ccbc48787148950fbe710683cbb35fe</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_agent_check"><sn_agent_check action="INSERT_OR_UPDATE"><active>true</active><auto_generate>true</auto_generate><background>true</background><check_def display_value="log shipper">78f8a221b7f43010ff78dc55ce11a9d4</check_def><check_json/><command>log_shipper -ci {{.labels.params_ci_name}},{{.labels.params_ci_sys_id}} -s {{.labels.params_ci_rel_service_name}},{{.labels.params_ci_rel_service_sys_id}} -l2 {{.labels.params_log2}} -l1 {{.labels.params_log1}}</command><command_prefix>log_shipper -ci {{.labels.params_ci_name}},{{.labels.params_ci_sys_id}} -s {{.labels.params_ci_rel_service_name}},{{.labels.params_ci_rel_service_sys_id}}</command_prefix><cred_failure_regex/><cron_expressions/><event_status_change_threshold/><event_status_repair_threshold/><interval>60</interval><is_cron>false</is_cron><is_draft>true</is_draft><is_interval>true</is_interval><label/><monitoring_policy display_value="Nginx Stream Logs">c13b404787148950fbe710683cbb353a</monitoring_policy><name>log shipper</name><prev_command/><published_check/><published_parent/><sys_class_name>sn_agent_check</sys_class_name><sys_created_by>netser</sys_created_by><sys_created_on>2021-12-12 14:31:55</sys_created_on><sys_domain>global</sys_domain><sys_id>2ccbc48787148950fbe710683cbb35fe</sys_id><sys_mod_count>3</sys_mod_count><sys_name>log shipper</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_agent_check_2ccbc48787148950fbe710683cbb35fe</sys_update_name><sys_updated_by>netser</sys_updated_by><sys_updated_on>2021-12-12 14:33:48</sys_updated_on><timeout>60</timeout></sn_agent_check></record_update>]]></payload>
+<payload_hash>-799500059</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:14</sys_created_on>
+<sys_id>80cc88c787148950fbe710683cbb35ab</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf106bfe0000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:14</sys_updated_on>
+<table/>
+<target_name>log shipper</target_name>
+<type>Check Instance</type>
+<update_domain>global</update_domain>
+<update_guid>943c8c8706148950ea272f88fff6d85f</update_guid>
+<update_guid_history>943c8c8706148950ea272f88fff6d85f:-799500059,921cc0c74f148950c7ecb7fc4fa02267:-519814612,34cb4c877314895063d483d6499207c2:1868182325,7ccb0887e5148950437b4acc9d406f03:-519814612,e0cb088703148950431a42d39ce94302:1868182325</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_policy_4e5a4c0787148950fbe710683cbb3563</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_agent_policy"&gt;&lt;sn_agent_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;auto_binding&gt;true&lt;/auto_binding&gt;&lt;check_group/&gt;&lt;checks_str&gt;78f8a221b7f43010ff78dc55ce11a9d4&lt;/checks_str&gt;&lt;cred_alias/&gt;&lt;credential_alias/&gt;&lt;cron_expressions/&gt;&lt;description&gt;This policy collects logs from Spring boot Java App running on Linux (and recognized as Tomcat) and sends them to the MID for further analysis&lt;/description&gt;&lt;filter/&gt;&lt;inherit_from_parent&gt;true&lt;/inherit_from_parent&gt;&lt;interval&gt;60&lt;/interval&gt;&lt;is_cron&gt;false&lt;/is_cron&gt;&lt;is_draft&gt;false&lt;/is_draft&gt;&lt;is_interval&gt;true&lt;/is_interval&gt;&lt;is_service_filter&gt;true&lt;/is_service_filter&gt;&lt;monitored_ci_group&gt;TomcatOnLinux&lt;/monitored_ci_group&gt;&lt;monitored_ci_script&gt;&lt;![CDATA[/*
+      Provide a script to get monitored CI type. 
+      The script returns a GlideRecord containing the chosen table and filter. 
+      Example code: 
+          var monitoredCis = new GlideRecord('cmdb_ci_computer'); 
+         monitoredCis.addQuery('name', 'test'); 
+         monitoredCis.query(); 
+         return monitoredCis; 
+ */
+ 
+ (function getMonitoredCiType(){
+ 
+  
+ })();]]&gt;&lt;/monitored_ci_script&gt;&lt;monitored_ci_type_filter&gt;false&lt;/monitored_ci_type_filter&gt;&lt;monitored_ci_type_group&gt;true&lt;/monitored_ci_type_group&gt;&lt;monitored_ci_type_script&gt;false&lt;/monitored_ci_type_script&gt;&lt;name&gt;Spring Logs (child from Tomcat on Linux)&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;proxy_advanced&gt;false&lt;/proxy_advanced&gt;&lt;proxy_agent/&gt;&lt;proxy_filter/&gt;&lt;proxy_script&gt;&lt;![CDATA[/*  
+The argument currentCiResult is the GlideRecord of the filter defined in the "Monitored Cis" tab
+  The script returns a string containing the chosen proxy agent ID
+ */
+ 
+ (function findProxyAgent(currentCiResult){
+ 
+  
+ })(currentCiResult);]]&gt;&lt;/proxy_script&gt;&lt;proxy_script_advanced&gt;false&lt;/proxy_script_advanced&gt;&lt;publish_status&gt;1&lt;/publish_status&gt;&lt;published_parent display_value="Tomcat on Linux Logs"&gt;1c4335d2b7913010ff78dc55ce11a9b6&lt;/published_parent&gt;&lt;related_policy/&gt;&lt;relationship_state&gt;2&lt;/relationship_state&gt;&lt;service_filter table="cmdb_ci_service_auto"&gt;name=Pet Clinic&lt;item endquery="false" field="name" goto="false" newquery="false" operator="=" or="false" value="Pet Clinic"/&gt;&lt;/service_filter&gt;&lt;single_proxy_agent&gt;false&lt;/single_proxy_agent&gt;&lt;sys_class_name&gt;sn_agent_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;netser&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-12 14:25:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;4e5a4c0787148950fbe710683cbb3563&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Spring Logs (child from Tomcat on Linux)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_agent_policy_4e5a4c0787148950fbe710683cbb3563&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;netser&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-12 14:25:44&lt;/sys_updated_on&gt;&lt;table&gt;cmdb_ci_computer&lt;/table&gt;&lt;/sn_agent_policy&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1754948023</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>88cc88c787148950fbe710683cbb35ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf0909300000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table>cmdb_ci_computer</table>
+<target_name>Spring Logs (child from Tomcat on Linux)</target_name>
+<type>Policy</type>
+<update_domain>global</update_domain>
+<update_guid>425acc07c2148950bd76f01bd17e927c</update_guid>
+<update_guid_history>425acc07c2148950bd76f01bd17e927c:-1754948023</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_check_param_290980c387148950fbe710683cbb35ea</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_agent_check_param"><sn_agent_check_param action="INSERT_OR_UPDATE"><active>true</active><check display_value="log shipper">6d0980c387148950fbe710683cbb35e8</check><description/><flag>-l1</flag><is_draft>true</is_draft><label/><mandatory>true</mandatory><name>log1</name><order>1</order><published_param/><published_parent display_value="-l1">104335d2b7913010ff78dc55ce11a9bb</published_parent><script/><sys_class_name>sn_agent_check_param</sys_class_name><sys_created_by>netser</sys_created_by><sys_created_on>2021-12-12 14:19:57</sys_created_on><sys_domain>global</sys_domain><sys_id>290980c387148950fbe710683cbb35ea</sys_id><sys_mod_count>1</sys_mod_count><sys_name>-l1</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_agent_check_param_290980c387148950fbe710683cbb35ea</sys_update_name><sys_updated_by>netser</sys_updated_by><sys_updated_on>2021-12-12 14:23:26</sys_updated_on><validation_regex/><value>/var/log/access_log*,spring,spring-access,,,</value><value_required>true</value_required></sn_agent_check_param></record_update>]]></payload>
+<payload_hash>-1782662013</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>8ccc88c787148950fbe710683cbb35ab</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf06efe80000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table/>
+<target_name>-l1</target_name>
+<type>Check Parameter</type>
+<update_domain>global</update_domain>
+<update_guid>24d944079f148950b69556e76956ff6e</update_guid>
+<update_guid_history>24d944079f148950b69556e76956ff6e:-1782662013,ecd980073a148950a90af31306d39a27:291049314</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_check_param_eccbc48787148950fbe710683cbb35ff</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_agent_check_param"><sn_agent_check_param action="INSERT_OR_UPDATE"><active>true</active><check display_value="log shipper">2ccbc48787148950fbe710683cbb35fe</check><description/><flag>-l1</flag><is_draft>true</is_draft><label/><mandatory>true</mandatory><name>log1</name><order>1</order><published_param/><published_parent/><script/><sys_class_name>sn_agent_check_param</sys_class_name><sys_created_by>netser</sys_created_by><sys_created_on>2021-12-12 14:31:55</sys_created_on><sys_domain>global</sys_domain><sys_id>eccbc48787148950fbe710683cbb35ff</sys_id><sys_mod_count>1</sys_mod_count><sys_name>-l1</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_agent_check_param_eccbc48787148950fbe710683cbb35ff</sys_update_name><sys_updated_by>netser</sys_updated_by><sys_updated_on>2021-12-12 14:33:24</sys_updated_on><validation_regex/><value>/var/log/nginx/access.log,nginx,nginx-access,,,</value><value_required>true</value_required></sn_agent_check_param></record_update>]]></payload>
+<payload_hash>7490993</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>c4cc88c787148950fbe710683cbb35ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf100d120000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table/>
+<target_name>-l1</target_name>
+<type>Check Parameter</type>
+<update_domain>global</update_domain>
+<update_guid>1a1cc0c7e7148950b6735ad7b0db6768</update_guid>
+<update_guid_history>1a1cc0c7e7148950b6735ad7b0db6768:7490993,fccb4c87e5148950f9d74d13dc34d5c0:134560878</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_agent_check_6d0980c387148950fbe710683cbb35e8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_agent_check"><sn_agent_check action="INSERT_OR_UPDATE"><active>true</active><auto_generate>true</auto_generate><background>true</background><check_def display_value="log shipper">78f8a221b7f43010ff78dc55ce11a9d4</check_def><check_json/><command>log_shipper -ci {{.labels.params_ci_name}},{{.labels.params_ci_sys_id}} -s {{.labels.params_ci_rel_service_name}},{{.labels.params_ci_rel_service_sys_id}} -l1 {{.labels.params_log1}} -l2 {{.labels.params_log2}}</command><command_prefix>log_shipper -ci {{.labels.params_ci_name}},{{.labels.params_ci_sys_id}} -s {{.labels.params_ci_rel_service_name}},{{.labels.params_ci_rel_service_sys_id}}</command_prefix><cred_failure_regex/><cron_expressions/><event_status_change_threshold/><event_status_repair_threshold/><interval>60</interval><is_cron>false</is_cron><is_draft>true</is_draft><is_interval>true</is_interval><label/><monitoring_policy display_value="Spring Logs (child from Tomcat on Linux)">e50980c387148950fbe710683cbb35e6</monitoring_policy><name>log shipper</name><prev_command/><published_check/><published_parent display_value="log shipper">dc4335d2b7913010ff78dc55ce11a9b9</published_parent><sys_class_name>sn_agent_check</sys_class_name><sys_created_by>netser</sys_created_by><sys_created_on>2021-12-12 14:19:57</sys_created_on><sys_domain>global</sys_domain><sys_id>6d0980c387148950fbe710683cbb35e8</sys_id><sys_mod_count>2</sys_mod_count><sys_name>log shipper</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_agent_check_6d0980c387148950fbe710683cbb35e8</sys_update_name><sys_updated_by>netser</sys_updated_by><sys_updated_on>2021-12-12 14:24:10</sys_updated_on><timeout>60</timeout></sn_agent_check></record_update>]]></payload>
+<payload_hash>1107405481</payload_hash>
+<remote_update_set display_value="Custom ACC-L Policies">4ccc88c787148950fbe710683cbb35aa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>netser</sys_created_by>
+<sys_created_on>2021-12-12 14:36:15</sys_created_on>
+<sys_id>c8cc88c787148950fbe710683cbb35ab</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17daf0799dc0000001</sys_recorded_at>
+<sys_updated_by>netser</sys_updated_by>
+<sys_updated_on>2021-12-12 14:36:15</sys_updated_on>
+<table/>
+<target_name>log shipper</target_name>
+<type>Check Instance</type>
+<update_domain>global</update_domain>
+<update_guid>13f98007921489504f4b02c540e1a86a</update_guid>
+<update_guid_history>13f98007921489504f4b02c540e1a86a:1107405481,e0d980074c148950bebcf8f68e36a22a:2088566978</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
