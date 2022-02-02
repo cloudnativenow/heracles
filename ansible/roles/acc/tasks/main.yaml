@@ -56,6 +56,9 @@
     session    include      system-auth
     EOF
 
+    # Add ServiceNow to sudoers
+    sudo usermod -aG wheel servicenow
+
     # Enable & Run Service
     systemctl enable acc
     systemctl restart acc
