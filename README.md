@@ -4,6 +4,6 @@ Terraform with Amazon Provider for Health Log Analytics test environment cluster
 
 # Releases
 
-* 1.0 Release
-* 2.0 Release
+* [README 1.0](releases/1.0/README.md)
+* [README 2.0](releases/2.0/README.md)
 
