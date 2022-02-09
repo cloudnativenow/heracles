@@ -1,0 +1,85 @@
+---
+# This playbook contains common plays that will be run on all spring nodes.
+
+- name: Install EPEL Repository
+  command: amazon-linux-extras install epel -y
+  become: yes
+  tags:
+    - spring
+
+- name: Install Common Tools
+  yum: name={{ item }} state=present
+  with_items:
+    - stress
+  become: yes
+  tags:
+    - spring
+
+- name: Install Java OpenJDK 11
+  become: yes
+  command: amazon-linux-extras install java-openjdk11 -y
+  tags:
+    - spring
+
+- name: Download Pet Clinic
+  become: yes
+  shell: |
+    GITHUB_TOKEN={{github_token}}
+    ARCHIVE_DOWNLOAD_URL=$(curl -Ls "https://api.github.com/repos/pangealab/castor/actions/artifacts" | jq -r .artifacts[0].archive_download_url)
+    wget --header="Authorization: Bearer $GITHUB_TOKEN" -qO- $ARCHIVE_DOWNLOAD_URL | zcat > /root/app.jar
+
+  tags:
+    - download
+
+- name: Configure Pet Service Service
+  become: yes
+  shell: |
+    # Configure Service Variables
+    cat <<-EOF > /etc/default/petclinic
+    # /etc/default/petclinic
+    MYSQL_HOST={{mysql_host}}
+    BINARY=/root/app.jar
+    JAVA_OPTS="-Dspring.profiles.active=mysql,chaos-monkey -Dlogging.level.org.springframework.web=INFO -Dserver.tomcat.accesslog.enabled=true -Dserver.tomcat.accesslog.directory=/var/log -Dlogging.path=/var/log"
+    EOF
+
+    # Source Variables
+    source /etc/default/petclinic
+    
+    # Configure Service
+    cat <<-EOF > /etc/systemd/system/petclinic.service
+    # /etc/systemd/system/petclinic.service
+    [Unit]
+    Description=Pet Clinic Spring Boot application
+    After=syslog.target
+    [Service]
+    EnvironmentFile=/etc/default/petclinic
+    WorkingDirectory=/root
+    User=root
+    ExecStart=/usr/bin/java $JAVA_OPTS -jar $BINARY
+    SuccessExitStatus=143
+    [Install]
+    WantedBy=multi-user.target
+    EOF
+
+    # Enable & Run Service
+    systemctl enable petclinic
+    systemctl daemon-reload
+    systemctl restart petclinic
+
+  tags:
+    - download
+
+- name: Remove Java Logs from Syslog
+  become: yes
+  shell: |
+    # Remove Java Logs from Syslog
+    cat <<-EOF > /etc/rsyslog.d/10-loom.conf
+    ### Drop java logs from syslog ###
+    :programname, isequal, "java" ~
+    EOF
+
+    # Enable & Run Service
+    systemctl restart rsyslog
+
+  tags:
+    - download    

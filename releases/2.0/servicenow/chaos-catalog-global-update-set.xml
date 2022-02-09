@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2021-11-08 16:03:51">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>HLA WorkShop Global Updates</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>0a44656b1b363c1087772f02b24bcbd2</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>bfba51481bf7fc1087772f02b24bcb37</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a_u_linux_server_1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="u_linux_server_1" table="u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>encode_utf8=false</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Linux Server 1</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>u_linux_server_1</element><element_reference>false</element_reference><foreign_database/><function_definition/><function_field>false</function_field><internal_type display_value="Reference">reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference display_value="" name="cmdb_ci_linux_server">cmdb_ci_linux_server</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:18:37</sys_created_on><sys_id>48a3394b1befb81087772f02b24bcb71</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Linux Server 1</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_dictionary_u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a_u_linux_server_1</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:18:37</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>1454106192</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>33ba55481bf7fc1087772f02b24bcbe4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0ae289d0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</table>
+<target_name>Query Results.Linux Server 1</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>9ca3394bb0efb810c3e6806ea4e52e81</update_guid>
+<update_guid_history>9ca3394bb0efb810c3e6806ea4e52e81:1454106192</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_6ce78def1b8b70107e95cb73604bcb15</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="DELETE"><contains display_value="evt_mgmt_operator" name="evt_mgmt_operator">c688e08293b00200725d3b5b357ffb8e</contains><role display_value="hla_workshop_user" name="hla_workshop_user">6b8b042b1b4f705087772f02b24bcb75</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 04:53:04</sys_created_on><sys_id>6ce78def1b8b70107e95cb73604bcb15</sys_id><sys_mod_count>0</sys_mod_count><sys_name>evt_mgmt_operator.hla_workshop_user</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_6ce78def1b8b70107e95cb73604bcb15</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 04:53:04</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>-1081192685</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>33ba55481bf7fc1087772f02b24bcbe7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c780db17b0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>evt_mgmt_operator.hla_workshop_user</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>288b05672fcb70109c310491597f09cb</update_guid>
+<update_guid_history>288b05672fcb70109c310491597f09cb:-1081192685,e0e701238acb70101d374dd0a8fabc3c:1996472223</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_db_object_6974f58b1befb81087772f02b24bcb89</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access/><actions_access>true</actions_access><alter_access>true</alter_access><caller_access/><client_scripts_access>true</client_scripts_access><configuration_access>false</configuration_access><create_access>true</create_access><create_access_controls>false</create_access_controls><delete_access>false</delete_access><extension_model/><is_document_table>false</is_document_table><is_extendable>false</is_extendable><label>Linux Servers-Query Results</label><live_feed_enabled>false</live_feed_enabled><name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</name><number_ref/><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class display_value="Query Builder Results" name="cmdb_qb_result_base">5853ca6b874230103434ffb2debb3543</super_class><sys_class_code>!)</sys_class_code><sys_class_name>sys_db_object</sys_class_name><sys_class_path>/!)</sys_class_path><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:22:16</sys_created_on><sys_id>6974f58b1befb81087772f02b24bcb89</sys_id><sys_mod_count>0</sys_mod_count><sys_name>CMDB Qb Result 3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_db_object_6974f58b1befb81087772f02b24bcb89</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:22:16</sys_updated_on><update_access>true</update_access><user_role/><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+<payload_hash>-2034663550</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>37ba51481bf7fc1087772f02b24bcb39</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0b181260000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</table>
+<target_name>Linux Servers-Query Results</target_name>
+<type>Table</type>
+<update_domain>global</update_domain>
+<update_guid>bd74b98b4defb810433023ae140c28b6</update_guid>
+<update_guid_history>bd74b98b4defb810433023ae140c28b6:-2034663550</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_6b8b042b1b4f705087772f02b24bcb75</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>hla_workshop_user</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix/><sys_class_name>sys_user_role</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 00:29:50</sys_created_on><sys_id>6b8b042b1b4f705087772f02b24bcb75</sys_id><sys_mod_count>0</sys_mod_count><sys_name>hla_workshop_user</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_6b8b042b1b4f705087772f02b24bcb75</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 00:29:50</sys_updated_on></sys_user_role></record_update>]]></payload>
+<payload_hash>1326295062</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>37ba55481bf7fc1087772f02b24bcbe6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770e2ef30000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>hla_workshop_user</target_name>
+<type>Role</type>
+<update_domain>global</update_domain>
+<update_guid>d4abc42bb24f7050944d11ee56381cfe</update_guid>
+<update_guid_history>d4abc42bb24f7050944d11ee56381cfe:1326295062</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_5f815e5fc0a8010e009bab06a8515bc9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="5f815e5fc0a8010e009bab06a8515bc9" sys_domain="global" table="cmdb_ci_linux_server" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>08a5390f1befb81087772f02b24bcb71</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>name</element><position>1</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>8ca5390f1befb81087772f02b24bcb71</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>asset_tag</element><position>2</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>04a5390f1befb81087772f02b24bcb72</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>manufacturer</element><position>3</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>88a5390f1befb81087772f02b24bcb72</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>asset</element><position>4</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>00a5390f1befb81087772f02b24bcb73</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>5</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>84a5390f1befb81087772f02b24bcb73</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>company</element><position>6</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>0ca5390f1befb81087772f02b24bcb73</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>serial_number</element><position>7</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>80a5390f1befb81087772f02b24bcb74</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>environment</element><position>8</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>08a5390f1befb81087772f02b24bcb74</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>model_id</element><position>9</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>8ca5390f1befb81087772f02b24bcb74</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assigned_to</element><position>10</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>04a5390f1befb81087772f02b24bcb75</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>11</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>88a5390f1befb81087772f02b24bcb75</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_class_name</element><position>12</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>00a5390f1befb81087772f02b24bcb76</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>comments</element><position>13</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:27:21</sys_created_on><sys_id>84a5390f1befb81087772f02b24bcb76</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="cmdb_ci_linux_server" sys_domain="global" view="Default view">5f815e5fc0a8010e009bab06a8515bc9</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:27:21</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>cmdb_ci_linux_server</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>glide.maint</sys_created_by><sys_created_on>2006-07-11 21:32:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path/><sys_id>5f815e5fc0a8010e009bab06a8515bc9</sys_id><sys_mod_count>11</sys_mod_count><sys_name>cmdb_ci_linux_server</sys_name><sys_overrides/><sys_package display_value="Configuration Management (CMDB)" source="com.snc.cmdb">97c1c26f870230103434ffb2debb352c</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_section_5f815e5fc0a8010e009bab06a8515bc9</sys_update_name><sys_updated_by>glide.maint</sys_updated_by><sys_updated_on>2008-02-19 19:50:52</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<payload_hash>1777525996</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>3bba55481bf7fc1087772f02b24bcbe5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0b627260000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>cmdb_ci_linux_server</table>
+<target_name>Linux Server</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_guid>08a5390faaefb810798817b27598c178</update_guid>
+<update_guid_history>08a5390faaefb810798817b27598c178:1777525996,fc15f9cb16efb81009f604aeb34d885d:-1566951614,3ce475cbe3efb81043babc9d595fca00:461860192,f4e431cb21efb810418d065ab425429f:-1566951614</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_7263adf377032300c8c2d6553b106110</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices>Off=OFF, Flows Only=FLOW, Flows and Actions=ACTION, Flows Actions and Steps=ON, Developer Trace=TRACE</choices><description>Level of reporting data generated by the flow engine.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>com.snc.process_flow.reporting.level</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>david.airmet@snc</sys_created_by><sys_created_on>2019-01-23 20:44:25</sys_created_on><sys_id>7263adf377032300c8c2d6553b106110</sys_id><sys_mod_count>20</sys_mod_count><sys_name>com.snc.process_flow.reporting.level</sys_name><sys_package display_value="Flow Designer - Flow Engine Reporting" source="com.glide.hub.flow_reporting">f9ac4aab878630103434ffb2debb3518</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_7263adf377032300c8c2d6553b106110</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-08 16:02:42</sys_updated_on><type>choicelist</type><value>ON</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=7263adf377032300c8c2d6553b106110"/></record_update>]]></payload>
+<payload_hash>-1415396663</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>3fba55481bf7fc1087772f02b24bcbe4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17d004998e60000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>com.snc.process_flow.reporting.level</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>5b7a1148b2f7fc1038324213d6bc7378</update_guid>
+<update_guid_history>5b7a1148b2f7fc1038324213d6bc7378:-1415396663,3c7a9d08f9f7fc1082faec9d004d3021:862496873,6117273ec43a78107ef4fd87f0fe19e8:-1415396663,2117273e103a7810cd45a6169aae0ce6:862496873</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_d0bb082b1b4f705087772f02b24bcb55</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="evt_mgmt_user" name="evt_mgmt_user">ed2c2a31eb12110045e1a5115206feaf</contains><role display_value="hla_workshop_user" name="hla_workshop_user">6b8b042b1b4f705087772f02b24bcb75</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 00:30:07</sys_created_on><sys_id>d0bb082b1b4f705087772f02b24bcb55</sys_id><sys_mod_count>0</sys_mod_count><sys_name>evt_mgmt_user.hla_workshop_user</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_d0bb082b1b4f705087772f02b24bcb55</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 00:30:07</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>2092565913</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>3fba55481bf7fc1087772f02b24bcbe7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770e70ea0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>evt_mgmt_user.hla_workshop_user</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>28bb0c2bb14f70500928e913c1a2703d</update_guid>
+<update_guid_history>28bb0c2bb14f70500928e913c1a2703d:2092565913</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_db_object_3f93354b1befb81087772f02b24bcb5d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access/><actions_access>true</actions_access><alter_access>true</alter_access><caller_access/><client_scripts_access>true</client_scripts_access><configuration_access>false</configuration_access><create_access>true</create_access><create_access_controls>false</create_access_controls><delete_access>false</delete_access><extension_model/><is_document_table>false</is_document_table><is_extendable>false</is_extendable><label>Query Results</label><live_feed_enabled>false</live_feed_enabled><name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</name><number_ref/><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class display_value="Query Builder Results" name="cmdb_qb_result_base">5853ca6b874230103434ffb2debb3543</super_class><sys_class_code>!(</sys_class_code><sys_class_name>sys_db_object</sys_class_name><sys_class_path>/!(</sys_class_path><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:18:36</sys_created_on><sys_id>3f93354b1befb81087772f02b24bcb5d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>CMDB Qb Result A0fbb49a7e614b73662b8282a97eab58e6646e5a</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_db_object_3f93354b1befb81087772f02b24bcb5d</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:18:36</sys_updated_on><update_access>true</update_access><user_role/><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+<payload_hash>-1670508531</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>73ba51481bf7fc1087772f02b24bcb39</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0ae278e0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</table>
+<target_name>Query Results</target_name>
+<type>Table</type>
+<update_domain>global</update_domain>
+<update_guid>04a3394b98efb8102a383bbd6d32de70</update_guid>
+<update_guid_history>04a3394b98efb8102a383bbd6d32de70:-1670508531</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_12322f571b8b705087772f02b24bcba1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="DELETE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>hla_workshop_users</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix/><sys_class_name>sys_user_role</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-12 21:29:14</sys_created_on><sys_id>12322f571b8b705087772f02b24bcba1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>hla_workshop_users</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_12322f571b8b705087772f02b24bcba1</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 21:29:14</sys_updated_on></sys_user_role></record_update>]]></payload>
+<payload_hash>1237120034</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>73ba55481bf7fc1087772f02b24bcbe6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770cdf210000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>hla_workshop_users</target_name>
+<type>Role</type>
+<update_domain>global</update_domain>
+<update_guid>1b4bc02bfd4f70500ed030eb95f4065c</update_guid>
+<update_guid_history>1b4bc02bfd4f70500ed030eb95f4065c:1237120034,b6422f57028b7050053a3173b24e1e41:676033814</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_control_ce74b98b1befb81087772f02b24bcbff</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_list_control"><sys_ui_list_control action="INSERT_OR_UPDATE"><columns_condition/><disable_nlq>false</disable_nlq><edit_condition/><edit_default_filter/><edit_roles/><empty_condition/><filter_condition/><filter_roles/><hierarchical_lists>false</hierarchical_lists><label/><link_condition/><link_roles/><list_edit_insert_row>false</list_edit_insert_row><list_edit_ref_qual_tag/><list_edit_type/><name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</name><new_condition/><new_roles/><omit_columns_if_empty>false</omit_columns_if_empty><omit_count>false</omit_count><omit_count_views>false</omit_count_views><omit_count_views_list/><omit_drilldown_link>false</omit_drilldown_link><omit_edit_button>true</omit_edit_button><omit_filters>false</omit_filters><omit_if_empty>false</omit_if_empty><omit_links>false</omit_links><omit_new_button>true</omit_new_button><related_list/><sys_class_name>sys_ui_list_control</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:22:18</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ce74b98b1befb81087772f02b24bcbff</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</sys_name><sys_overrides display_value="">global</sys_overrides><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_list_control_ce74b98b1befb81087772f02b24bcbff</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:22:18</sys_updated_on></sys_ui_list_control></record_update>]]></payload>
+<payload_hash>-583462741</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>77ba55481bf7fc1087772f02b24bcbe5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0b184ee0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</table>
+<target_name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</target_name>
+<type>List Control</type>
+<update_domain>global</update_domain>
+<update_guid>0674f98b89efb8109da28f4b0c5ad301</update_guid>
+<update_guid_history>0674f98b89efb8109da28f4b0c5ad301:-583462741</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_56b7f3df1bcb705087772f02b24bcba1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="DELETE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>glide.security.snc_read_only_role.tables.exempt_create</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-12 23:03:32</sys_created_on><sys_id>56b7f3df1bcb705087772f02b24bcba1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>glide.security.snc_read_only_role.tables.exempt_create</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_56b7f3df1bcb705087772f02b24bcba1</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 23:03:32</sys_updated_on><type>string</type><value>sys_user_session, sysevent, syslog, syslog_transaction, sys_user_preference, sys_ui_list, sys_ui_list_element, sys_db_cache, user_multifactor_auth, sc_cart, sc_req_item, sc_request, sc_cart_item, sc_item_option_mtom, wf_context, wf_workflow_version, wf_workflow, wf_variable, wf_stage, wf_activity, wf_executing, wf_log, sys_mutex, wf_history, wf_transition_history, wf_command, sys_attachment, sys_number_counter, task, sc_item_option, sc_task,  sys_trigger</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=56b7f3df1bcb705087772f02b24bcba1"/></record_update>]]></payload>
+<payload_hash>-1739837459</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>7bba55481bf7fc1087772f02b24bcbe4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c77118a260000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>glide.security.snc_read_only_role.tables.exempt_create</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>827c486b114f70504a5d29b7bce45321</update_guid>
+<update_guid_history>827c486b114f70504a5d29b7bce45321:-1739837459,c0e7bbdf49cb70508d595fffc10ad18d:-1016248607</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_bf7263971b8b705087772f02b24bcb7b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="DELETE"><contains display_value="evt_mgmt_admin" name="evt_mgmt_admin">600be631eb12110045e1a5115206fe38</contains><role display_value="">12322f571b8b705087772f02b24bcba1</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-12 21:30:07</sys_created_on><sys_id>bf7263971b8b705087772f02b24bcb7b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>evt_mgmt_admin.hla_workshop_users</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_bf7263971b8b705087772f02b24bcb7b</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 21:30:07</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>-262637134</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>7bba55481bf7fc1087772f02b24bcbe7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770cd92d0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>evt_mgmt_admin.hla_workshop_users</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>cf4bc02be44f70501ef9752f845c061d</update_guid>
+<update_guid_history>cf4bc02be44f70501ef9752f845c061d:-262637134,0882e3973f8b7050c1a05c54075aba0b:-1301153616</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="" extends="cmdb_qb_result_base" table="u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>ignore_baseline=true</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element/><element_reference>false</element_reference><foreign_database/><function_definition/><function_field>false</function_field><internal_type display_value="Collection">collection</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:18:36</sys_created_on><sys_id>f793354b1befb81087772f02b24bcb62</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_dictionary_u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a_null</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:18:36</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>1047141054</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>7fba55481bf7fc1087772f02b24bcbe3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0ae27690000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</table>
+<target_name>Query Results</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>4ca3394b7defb810fb5ea48c9b10556e</update_guid>
+<update_guid_history>4ca3394b7defb810fb5ea48c9b10556e:1047141054</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_589b05671bcb70107e95cb73604bcbef</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="evt_mgmt_operator" name="evt_mgmt_operator">c688e08293b00200725d3b5b357ffb8e</contains><role display_value="hla_workshop_user" name="hla_workshop_user">6b8b042b1b4f705087772f02b24bcb75</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 05:09:11</sys_created_on><sys_id>589b05671bcb70107e95cb73604bcbef</sys_id><sys_mod_count>0</sys_mod_count><sys_name>evt_mgmt_operator.hla_workshop_user</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_589b05671bcb70107e95cb73604bcbef</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 05:09:11</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>1996472223</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>7fba55481bf7fc1087772f02b24bcbe6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c780def380000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>evt_mgmt_operator.hla_workshop_user</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>ac9b856752cb70100de0b0d8371462d0</update_guid>
+<update_guid_history>ac9b856752cb70100de0b0d8371462d0:1996472223</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_container_5f6fd933d7230200a9addd173e24d4db</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Submitted Request_orig - Container 2</name><order>2</order><sp_page display_value="sc_request">a44fd933d7230200a9addd173e24d4b3</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-11-12 15:43:07</sys_created_on><sys_id>5f6fd933d7230200a9addd173e24d4db</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Submitted Request_orig - Container 2</sys_name><sys_package display_value="Service Portal - Service Catalog (do not activate...see plugin description)" source="com.glide.service-portal.service-catalog">c20bce23878630103434ffb2debb35ca</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sp_container_5f6fd933d7230200a9addd173e24d4db</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-04 18:41:49</sys_updated_on><title/><width>container-fluid</width></sp_container></record_update>]]></payload>
+<payload_hash>683892719</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>b3ba51481bf7fc1087772f02b24bcb38</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cec41d2e30000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>Submitted Request_orig - Container 2</target_name>
+<type>Container</type>
+<update_domain>global</update_domain>
+<update_guid>fa8891ba70eb781026d34e32065e345b</update_guid>
+<update_guid_history>fa8891ba70eb781026d34e32065e345b:683892719,41589d7a05eb78109ca01e2331e547a2:1106575913,7bcee78a9423f4102c7bedfa2ab6af8a:683892719,97508cd3798b30508311f66e2d8bbe7e:-958239661,9f508cd3ef8b3050435c1a8a7348da7c:621908183</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_control_18a3394b1befb81087772f02b24bcb87</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_list_control"><sys_ui_list_control action="INSERT_OR_UPDATE"><columns_condition/><disable_nlq>false</disable_nlq><edit_condition/><edit_default_filter/><edit_roles/><empty_condition/><filter_condition/><filter_roles/><hierarchical_lists>false</hierarchical_lists><label/><link_condition/><link_roles/><list_edit_insert_row>false</list_edit_insert_row><list_edit_ref_qual_tag/><list_edit_type/><name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</name><new_condition/><new_roles/><omit_columns_if_empty>false</omit_columns_if_empty><omit_count>false</omit_count><omit_count_views>false</omit_count_views><omit_count_views_list/><omit_drilldown_link>false</omit_drilldown_link><omit_edit_button>true</omit_edit_button><omit_filters>false</omit_filters><omit_if_empty>false</omit_if_empty><omit_links>false</omit_links><omit_new_button>true</omit_new_button><related_list/><sys_class_name>sys_ui_list_control</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:18:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>18a3394b1befb81087772f02b24bcb87</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</sys_name><sys_overrides display_value="">global</sys_overrides><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_list_control_18a3394b1befb81087772f02b24bcb87</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:18:38</sys_updated_on></sys_ui_list_control></record_update>]]></payload>
+<payload_hash>2107822689</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>b3ba55481bf7fc1087772f02b24bcbe5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0ae2b470000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</table>
+<target_name>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a</target_name>
+<type>List Control</type>
+<update_domain>global</update_domain>
+<update_guid>90a3394b5befb810cea0783cb526718a</update_guid>
+<update_guid_history>90a3394b5befb810cea0783cb526718a:2107822689</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_wizard_answer_84a3394b1befb81087772f02b24bcb2c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>New Query Results</answer><button_label/><dependent_value/><element/><name>Query Results</name><next_question/><order>100</order><payload_name/><question display_value="Query Builder Results" name="Query Builder Results">9453ca6b874230103434ffb2debb3545</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:18:37</sys_created_on><sys_id>84a3394b1befb81087772f02b24bcb2c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Query Results</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_wizard_answer_84a3394b1befb81087772f02b24bcb2c</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:18:37</sys_updated_on><table/><target_url>u_cmdb_qb_result_a0fbb49a7e614b73662b8282a97eab58e6646e5a.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+<payload_hash>1537559467</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>b3ba55481bf7fc1087772f02b24bcbe8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0ae27380000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>Query Results</target_name>
+<type>Answer</type>
+<update_domain>global</update_domain>
+<update_guid>cca3394b51efb810003a8882a13a112e</update_guid>
+<update_guid_history>cca3394b51efb810003a8882a13a112e:1537559467</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_1cf7f7df1bcb705087772f02b24bcbcd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="DELETE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>glide.security.snc_read_only_role.tables.exempt_delete</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-12 23:04:07</sys_created_on><sys_id>1cf7f7df1bcb705087772f02b24bcbcd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>glide.security.snc_read_only_role.tables.exempt_delete</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_1cf7f7df1bcb705087772f02b24bcbcd</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 23:04:07</sys_updated_on><type>string</type><value>sys_user_preference, sys_ui_list, sys_ui_list_element, sys_db_cache, user_multifactor_auth, sc_cart_item, sc_item_option_mtom</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=1cf7f7df1bcb705087772f02b24bcbcd"/></record_update>]]></payload>
+<payload_hash>-1252600014</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>b7ba55481bf7fc1087772f02b24bcbe4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c7711895d0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>glide.security.snc_read_only_role.tables.exempt_delete</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>ca7c086b784f70507f39e50a8fbc5487</update_guid>
+<update_guid_history>ca7c086b784f70507f39e50a8fbc5487:-1252600014,3c08bbdfc3cb7050e6a5e20b54db049e:-1790221378</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_b08b842b1b4f705087772f02b24bcbc3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="evt_mgmt_admin" name="evt_mgmt_admin">600be631eb12110045e1a5115206fe38</contains><role display_value="hla_admin_read_only" name="hla_admin_read_only">6c5b002b1b4f705087772f02b24bcb91</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 00:29:20</sys_created_on><sys_id>b08b842b1b4f705087772f02b24bcbc3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>evt_mgmt_admin.hla_admin_read_only</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_b08b842b1b4f705087772f02b24bcbc3</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 00:29:20</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>-185642157</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>b7ba55481bf7fc1087772f02b24bcbe7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770dbb170000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>evt_mgmt_admin.hla_admin_read_only</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>458bc42bca4f7050772b45962accf6a4</update_guid>
+<update_guid_history>458bc42bca4f7050772b45962accf6a4:-185642157</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965_u_linux_server_1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="u_linux_server_1" table="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>encode_utf8=false</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Linux Server 1</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>u_linux_server_1</element><element_reference>false</element_reference><foreign_database/><function_definition/><function_field>false</function_field><internal_type display_value="Reference">reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference display_value="" name="cmdb_ci_linux_server">cmdb_ci_linux_server</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:22:17</sys_created_on><sys_id>3d74b98b1befb81087772f02b24bcbb7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Linux Server 1</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_dictionary_u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965_u_linux_server_1</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:22:17</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>969929520</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>bbba55481bf7fc1087772f02b24bcbe3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0b1823a0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</table>
+<target_name>Linux Servers-Query Results.Linux Server 1</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>7174b98bbaefb810f2a5af760ea37bc9</update_guid>
+<update_guid_history>7174b98bbaefb810f2a5af760ea37bc9:969929520</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_4482e3971b8b705087772f02b24bcb0c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="DELETE"><contains display_value="snc_read_only" name="snc_read_only">b52b6120bf0021003edbdd8c3f0739d4</contains><role display_value="">12322f571b8b705087772f02b24bcba1</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-12 21:30:09</sys_created_on><sys_id>4482e3971b8b705087772f02b24bcb0c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snc_read_only.hla_workshop_users</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_4482e3971b8b705087772f02b24bcb0c</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 21:30:09</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>-106119998</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>bbba55481bf7fc1087772f02b24bcbe6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770cd9920000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>snc_read_only.hla_workshop_users</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>0f4bc02bd54f70501b4eb87d24d11024</update_guid>
+<update_guid_history>0f4bc02bd54f70501b4eb87d24d11024:-106119998,5082e397c98b7050849ea1d6a20e4d2c:472073092</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_page_a44fd933d7230200a9addd173e24d4b3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page"><sp_page action="INSERT_OR_UPDATE"><category>sc</category><css>.sp-attachments-input {&#13;
+  visibility: hidden;&#13;
+  position: absolute;&#13;
+  left: 0px;&#13;
+}&#13;
+&#13;
+.file-selector {&#13;
+  float: right;&#13;
+  font-size: 24px;&#13;
+  margin-top: -5px;&#13;
+}</css><draft>false</draft><dynamic_title_structure/><id>sc_request_orig</id><internal>false</internal><omit_watcher>false</omit_watcher><public>false</public><roles/><seo_script/><short_description>Request</short_description><sys_class_name>sp_page</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-11-12 15:42:57</sys_created_on><sys_id>a44fd933d7230200a9addd173e24d4b3</sys_id><sys_mod_count>8</sys_mod_count><sys_name>sc_request_orig</sys_name><sys_package display_value="Service Portal - Service Catalog (do not activate...see plugin description)" source="com.glide.service-portal.service-catalog">c20bce23878630103434ffb2debb35ca</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sp_page_a44fd933d7230200a9addd173e24d4b3</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-04 18:41:49</sys_updated_on><title>Submitted Request_orig</title><use_seo_script>false</use_seo_script></sp_page><sys_translated_text action="delete_multiple" query="documentkey=a44fd933d7230200a9addd173e24d4b3"/></record_update>]]></payload>
+<payload_hash>1624459761</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>bfba51481bf7fc1087772f02b24bcb38</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cec41d3350000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>sc_request_orig</target_name>
+<type>Page</type>
+<update_domain>global</update_domain>
+<update_guid>3e88d1bad3eb7810849cb6c8647dbd02</update_guid>
+<update_guid_history>3e88d1bad3eb7810849cb6c8647dbd02:1624459761,19589d7af3eb7810e583d15c3ba5a1a7:826890263,f93f27cae223f41081efd01a3264bbb1:1624459761,3fceeb8a9223f41000bfe9274fbad198:1187722248,f7ceeb8aed23f41006ebb9d448e22396:826890263</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_ccd4864f1b23f81087772f02b24bcbcc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="ccd4864f1b23f81087772f02b24bcbcc" sys_domain="global" table="sa_service_group_member" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_id>04d4864f1b23f81087772f02b24bcbd3</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sa_service_group_member" sys_domain="global" view="Default view">ccd4864f1b23f81087772f02b24bcbcc</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_domain</element><position>1</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_id>8cd4864f1b23f81087772f02b24bcbd3</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sa_service_group_member" sys_domain="global" view="Default view">ccd4864f1b23f81087772f02b24bcbcc</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>service</element><position>2</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_id>04d4864f1b23f81087772f02b24bcbd4</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sa_service_group_member" sys_domain="global" view="Default view">ccd4864f1b23f81087772f02b24bcbcc</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_id>88d4864f1b23f81087772f02b24bcbd4</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sa_service_group_member" sys_domain="global" view="Default view">ccd4864f1b23f81087772f02b24bcbcc</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>service_group</element><position>4</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_id>00d4864f1b23f81087772f02b24bcbd5</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sa_service_group_member" sys_domain="global" view="Default view">ccd4864f1b23f81087772f02b24bcbcc</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>5</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_id>84d4864f1b23f81087772f02b24bcbd5</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sa_service_group_member" sys_domain="global" view="Default view">ccd4864f1b23f81087772f02b24bcbcc</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>sa_service_group_member</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:33:43</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ccd4864f1b23f81087772f02b24bcbcc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sa_service_group_member</sys_name><sys_overrides/><sys_package display_value="Application Service" source="com.snc.cmdb.it_service">890e4a6387c630103434ffb2debb3540</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_section_ccd4864f1b23f81087772f02b24bcbcc</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:33:43</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<payload_hash>-1888756630</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>bfba55481bf7fc1087772f02b24bcbe5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0f2e7e10000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>sa_service_group_member</table>
+<target_name>Application Service Group Member</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_guid>ccd4864fad23f810686134c72072a3d6</update_guid>
+<update_guid_history>ccd4864fad23f810686134c72072a3d6:-1888756630,4cd4864f8723f81007fc3c6e1b7852cf:1745797615</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_12eb2b931bcb705087772f02b24bcbb9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="DELETE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>glide.security.snc_read_only_role.tables.exempt_write</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-12 22:12:27</sys_created_on><sys_id>12eb2b931bcb705087772f02b24bcbb9</sys_id><sys_mod_count>1</sys_mod_count><sys_name>glide.security.snc_read_only_role.tables.exempt_write</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_12eb2b931bcb705087772f02b24bcbb9</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 23:02:46</sys_updated_on><type>string</type><value>sys_user_session, sysevent, syslog, syslog_transaction, sys_user_preference, sys_ui_list, sys_ui_list_element, sys_db_cache, user_multifactor_auth, sc_cart, sc_req_item, sc_request, sc_cart_item, sc_item_option_mtom, wf_context, wf_workflow_version, wf_workflow, wf_variable, wf_stage, wf_activity, wf_executing, wf_log, sys_mutex, wf_history, wf_transition_history, wf_command, sys_attachment, sys_number_counter, task, sc_item_option, sc_task,  sys_trigger,em_alert</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=12eb2b931bcb705087772f02b24bcbb9"/></record_update>]]></payload>
+<payload_hash>111578656</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>f3ba55481bf7fc1087772f02b24bcbe4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c771188730000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>glide.security.snc_read_only_role.tables.exempt_write</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>c67c086bad4f7050928c0113abce7983</update_guid>
+<update_guid_history>c67c086bad4f7050928c0113abce7983:111578656,c1b737df57cb70500684828a2b1a15a5:-1595966292,083c6f9365cb7050e8d11199c7c81787:-806839246</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_818bc42b1b4f705087772f02b24bcba5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="snc_read_only" name="snc_read_only">b52b6120bf0021003edbdd8c3f0739d4</contains><role display_value="hla_admin_read_only" name="hla_admin_read_only">6c5b002b1b4f705087772f02b24bcb91</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 00:29:21</sys_created_on><sys_id>818bc42b1b4f705087772f02b24bcba5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snc_read_only.hla_admin_read_only</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_contains_818bc42b1b4f705087772f02b24bcba5</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 00:29:21</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<payload_hash>-1367336825</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>f3ba55481bf7fc1087772f02b24bcbe7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770dbc580000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>snc_read_only.hla_admin_read_only</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_guid>558bc42b264f7050dbf4df413f472ad1</update_guid>
+<update_guid_history>558bc42b264f7050dbf4df413f472ad1:-1367336825</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="" extends="cmdb_qb_result_base" table="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>ignore_baseline=true</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element/><element_reference>false</element_reference><foreign_database/><function_definition/><function_field>false</function_field><internal_type display_value="Collection">collection</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:22:16</sys_created_on><sys_id>6574b98b1befb81087772f02b24bcb9d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_dictionary_u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965_null</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:22:16</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>945021785</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>f7ba51481bf7fc1087772f02b24bcb39</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0b180fb0000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</table>
+<target_name>Linux Servers-Query Results</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>f574b98b0aefb810757a268a3148cab5</update_guid>
+<update_guid_history>f574b98b0aefb810757a268a3148cab5:945021785</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_6c5b002b1b4f705087772f02b24bcb91</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>hla_admin_read_only</name><requires_subscription>-1</requires_subscription><scoped_admin>false</scoped_admin><suffix/><sys_class_name>sys_user_role</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-10-13 00:28:38</sys_created_on><sys_id>6c5b002b1b4f705087772f02b24bcb91</sys_id><sys_mod_count>0</sys_mod_count><sys_name>hla_admin_read_only</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_6c5b002b1b4f705087772f02b24bcb91</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-13 00:28:38</sys_updated_on></sys_user_role></record_update>]]></payload>
+<payload_hash>1752683418</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>f7ba55481bf7fc1087772f02b24bcbe6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c770d16250000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>hla_admin_read_only</target_name>
+<type>Role</type>
+<update_domain>global</update_domain>
+<update_guid>fa5bc02bc74f7050bf53802b439782ff</update_guid>
+<update_guid_history>fa5bc02bc74f7050bf53802b439782ff:1752683418</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_container_8ef96a115b3212000d7ec7ad31f91a6e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name>breadcrumbs-container</class_name><container_class_name/><name>Submitted Request_orig - Container 1</name><order>1</order><sp_page display_value="sc_request">a44fd933d7230200a9addd173e24d4b3</sp_page><subheader>true</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2016-04-14 16:08:04</sys_created_on><sys_id>8ef96a115b3212000d7ec7ad31f91a6e</sys_id><sys_mod_count>5</sys_mod_count><sys_name>Submitted Request_orig - Container 1</sys_name><sys_package display_value="Service Portal - Service Catalog (do not activate...see plugin description)" source="com.glide.service-portal.service-catalog">c20bce23878630103434ffb2debb35ca</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sp_container_8ef96a115b3212000d7ec7ad31f91a6e</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-04 18:41:49</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+<payload_hash>-705304658</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>fbba51481bf7fc1087772f02b24bcb38</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cec41d3000000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>Submitted Request_orig - Container 1</target_name>
+<type>Container</type>
+<update_domain>global</update_domain>
+<update_guid>768891bad3eb7810401476fb24c215ff</update_guid>
+<update_guid_history>768891bad3eb7810401476fb24c215ff:-705304658,01589d7a8feb7810b3ee3c13181658a4:1109116842,3bcee78aea23f41079f78bebc30e778c:-705304658</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_86b3cacb1b23f81087772f02b24bcb8f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="86b3cacb1b23f81087772f02b24bcb8f" sys_domain="global" table="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_id>86b3cacb1b23f81087772f02b24bcb96</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" sys_domain="global" view="Default view">86b3cacb1b23f81087772f02b24bcb8f</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>query</element><position>1</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_id>02b3cacb1b23f81087772f02b24bcb97</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" sys_domain="global" view="Default view">86b3cacb1b23f81087772f02b24bcb8f</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>count</element><position>2</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_id>86b3cacb1b23f81087772f02b24bcb97</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" sys_domain="global" view="Default view">86b3cacb1b23f81087772f02b24bcb8f</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_id>ceb3cecb1b23f81087772f02b24bcbb8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" sys_domain="global" view="Default view">86b3cacb1b23f81087772f02b24bcb8f</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_linux_server_1</element><position>4</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_id>46b3cecb1b23f81087772f02b24bcbb9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" sys_domain="global" view="Default view">86b3cacb1b23f81087772f02b24bcb8f</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>5</position><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_id>cab3cecb1b23f81087772f02b24bcbb9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965" sys_domain="global" view="Default view">86b3cacb1b23f81087772f02b24bcb8f</sys_ui_section><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 16:28:56</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>86b3cacb1b23f81087772f02b24bcb8f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_section_86b3cacb1b23f81087772f02b24bcb8f</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 16:28:56</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<payload_hash>1972615174</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>fbba55481bf7fc1087772f02b24bcbe5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0ee86730000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965</table>
+<target_name>Linux Servers-Query Results</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_guid>06b3cecb9023f81008b1dd2a048dbfbb</update_guid>
+<update_guid_history>06b3cecb9023f81008b1dd2a048dbfbb:1972615174,8eb3cacb4323f810e40b0d6c86739c92:-530376746</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_9b156f3a1b3a78107e95cb73604bcb08</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Approval engine to use for the sc_request table.  Valid options are: 'approval_rules' to use Approval Rules, 'process_guide' to use Process Guides and 'off' to turn off the approval engines for the table (set to 'off' when using Workflow to manage approvals). Off is the default setting.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.approval_engine.sc_request</name><read_roles/><suffix>global</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-09-28 22:08:53</sys_created_on><sys_id>9b156f3a1b3a78107e95cb73604bcb08</sys_id><sys_mod_count>2</sys_mod_count><sys_name>glide.approval_engine.sc_request</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_9b156f3a1b3a78107e95cb73604bcb08</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-10-12 06:47:59</sys_updated_on><type>string</type><value>approval_engine</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=9b156f3a1b3a78107e95cb73604bcb08"/></record_update>]]></payload>
+<payload_hash>-520661431</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>ffba55481bf7fc1087772f02b24bcbe4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17c73420e900000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>glide.approval_engine.sc_request</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>12985893270f3050be102f81962db012</update_guid>
+<update_guid_history>12985893270f3050be102f81962db012:-520661431,78781893ae0f3050189bb13f580af29b:-2049753096,bf156f3acd3a7810a2b9a4fa59380f0e:-520661431</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_wizard_answer_3d74b98b1befb81087772f02b24bcbb2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>New Linux Servers-Query Results</answer><button_label/><dependent_value/><element/><name>Linux Servers-Query Results</name><next_question/><order>100</order><payload_name/><question display_value="Query Builder Results" name="Query Builder Results">9453ca6b874230103434ffb2debb3545</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>dsmith</sys_created_by><sys_created_on>2021-11-05 15:22:17</sys_created_on><sys_id>3d74b98b1befb81087772f02b24bcbb2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Linux Servers-Query Results</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_wizard_answer_3d74b98b1befb81087772f02b24bcbb2</sys_update_name><sys_updated_by>dsmith</sys_updated_by><sys_updated_on>2021-11-05 15:22:17</sys_updated_on><table/><target_url>u_cmdb_qb_result_3fc31c7bd32e90c1049c0a4d9b9d210a09bae965.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+<payload_hash>-1248861703</payload_hash>
+<remote_update_set display_value="HLA WorkShop Global Updates">bfba51481bf7fc1087772f02b24bcb37</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>dsmith</sys_created_by>
+<sys_created_on>2021-11-08 16:03:51</sys_created_on>
+<sys_id>ffba55481bf7fc1087772f02b24bcbe7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17cf0b180d80000001</sys_recorded_at>
+<sys_updated_by>dsmith</sys_updated_by>
+<sys_updated_on>2021-11-08 16:03:51</sys_updated_on>
+<table/>
+<target_name>Linux Servers-Query Results</target_name>
+<type>Answer</type>
+<update_domain>global</update_domain>
+<update_guid>3174b98b48efb8109587dc1ec3f3e3b4</update_guid>
+<update_guid_history>3174b98b48efb8109587dc1ec3f3e3b4:-1248861703</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>

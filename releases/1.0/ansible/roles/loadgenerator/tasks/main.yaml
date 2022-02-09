@@ -1,0 +1,64 @@
+
+---
+# This playbook installs the loadgenerator
+
+- name: Install Docker
+  become: yes
+  yum: name={{ item }} state=present
+  with_items:
+   - docker
+  tags:
+    - loadgenerator
+
+- name: Setting Docker service state
+  become: yes
+  service: name=docker enabled=yes state=started
+  tags:
+    - loadgenerator
+
+- name: Configure Load Generator Service
+  become: yes
+  shell: |
+    # Configure Service Variables
+    FRONTEND_ADDR={{frontend_addr}}
+    USERS=10
+    
+    cat <<-EOF > /etc/default/hypnos
+    # /etc/default/hypnos    
+    FRONTEND_ADDR={{frontend_addr}}
+    USERS=10
+    EOF
+
+    # Source Variables
+    source /etc/default/hypnos
+
+    # Configure Service
+    cat << EOF > /etc/systemd/system/hypnos.service
+    # /etc/systemd/system/hypnos.service
+    [Unit]
+    Description=Hypnos Locust Service
+    After=docker.service
+    Requires=docker.service
+    [Service]
+    EnvironmentFile=/etc/default/hypnos
+    TimeoutStartSec=0
+    Restart=always
+    ExecStartPre=-/usr/bin/docker kill %n
+    ExecStartPre=/usr/bin/docker pull pangealab/hypnos:latest
+    ExecStart=/usr/bin/docker run --rm --name %n \
+        -e FRONTEND_ADDR=$FRONTEND_ADDR \
+        -e USERS=$USERS \
+        -p 80:80 \
+        pangealab/hypnos:latest
+    ExecStop=/usr/bin/docker kill %n
+    [Install]
+    WantedBy=multi-user.target
+    EOF
+
+    # Enable & Run Service
+    systemctl enable hypnos
+    systemctl daemon-reload
+    systemctl restart hypnos
+  
+  tags:
+    - loadgenerator

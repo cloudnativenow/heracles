@@ -1,0 +1,42 @@
+---
+# This playbook installs the agent stack for this site.
+
+- name: Install ServiceNow ACC
+  hosts: nginx, spring, mysql
+  remote_user: ec2-user
+  become: yes
+
+  roles:
+    - acc
+
+- name: Install Filebeat Common
+  hosts: nginx, spring, mysql
+  remote_user: ec2-user
+  become: yes
+
+  roles:
+    - filebeat-common
+
+- name: Install Filebeat for NGINX
+  hosts: nginx
+  remote_user: ec2-user
+  become: yes
+
+  roles:
+    - filebeat-nginx
+
+- name: Install Filebeat for Spring
+  hosts: spring
+  remote_user: ec2-user
+  become: yes
+
+  roles:
+    - filebeat-spring
+
+- name: Install Filebeat for MySQL
+  hosts: mysql
+  remote_user: ec2-user
+  become: yes
+
+  roles:
+    - filebeat-mysql    

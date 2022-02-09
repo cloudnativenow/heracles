@@ -1,0 +1,37 @@
+---
+# This playbook installs the software stack for this site.
+
+- name: Install common software on all nodes
+  hosts: all
+  remote_user: ec2-user
+
+  roles:
+    - common
+
+- name: Install MySQL Database
+  hosts: mysql
+  remote_user: ec2-user
+
+  roles:
+    - mysql
+
+- name: Install Java Spring Boot
+  hosts: spring
+  remote_user: ec2-user
+
+  roles:
+    - spring     
+
+- name: Install NGINX
+  hosts: nginx
+  remote_user: ec2-user
+
+  roles:
+    - nginx
+
+- name: Install Load Generator
+  hosts: control
+  remote_user: ec2-user
+
+  roles:
+    - loadgenerator
