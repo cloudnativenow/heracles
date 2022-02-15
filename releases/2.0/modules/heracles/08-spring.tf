@@ -18,9 +18,9 @@ resource "aws_eip" "spring_eip" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-spring-${count.index + 1}-eip"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-spring-${count.index + 1}-eip"
+    })
   )  
 }
 
@@ -46,9 +46,9 @@ resource "aws_instance" "spring" {
     volume_type = "gp2"
     tags = merge(
       local.common_tags,
-      map(
-        "Name", "${var.cluster_id}-spring-${count.index + 1}-root"
-      )
+      tomap({
+        "Name"= "${var.cluster_id}-spring-${count.index + 1}-root"
+      })
     )    
   }
 
@@ -59,9 +59,9 @@ resource "aws_instance" "spring" {
   #   volume_type = "gp2"
   #   tags = merge(
   #     local.common_tags,
-  #     map(
-  #       "Name", "${var.cluster_id}-spring-${count.index + 1}-data"
-  #     )
+  #     tomap({
+  #       "Name"= "${var.cluster_id}-spring-${count.index + 1}-data"
+  #     })
   #   )     
   # }
 
@@ -70,8 +70,8 @@ resource "aws_instance" "spring" {
   //  Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-spring-${count.index + 1}"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-spring-${count.index + 1}"
+    })
   )
 }
