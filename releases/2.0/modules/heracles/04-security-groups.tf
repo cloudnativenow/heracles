@@ -22,9 +22,9 @@ resource "aws_security_group" "heracles-vpc" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-sg"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-sg"
+    })
   )
 }
 
@@ -70,9 +70,9 @@ resource "aws_security_group" "heracles-public-ingress" {
     # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-ingress"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-ingress"
+    })
   )
 }
 
@@ -94,9 +94,9 @@ resource "aws_security_group" "heracles-public-egress" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-egress"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-egress"
+    })
   )
 }
 
@@ -117,8 +117,8 @@ resource "aws_security_group" "heracles-ssh" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-ssh"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-ssh"
+    })
   )
 }
