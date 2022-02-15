@@ -15,9 +15,9 @@ resource "aws_eip" "mysql_eip" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-mysql-eip"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-mysql-eip"
+    })
   )   
 }
 
@@ -41,9 +41,9 @@ resource "aws_instance" "mysql" {
     volume_type = "gp2"
     tags = merge(
       local.common_tags,
-      map(
-        "Name", "${var.cluster_id}-mysql-root"
-      )
+      tomap({
+        "Name"= "${var.cluster_id}-mysql-root"
+      })
     )    
   }  
 
@@ -52,8 +52,8 @@ resource "aws_instance" "mysql" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-mysql"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-mysql"
+    })
   )
 }
