@@ -15,9 +15,9 @@ resource "aws_eip" "nginx_eip" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-nginx-eip"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-nginx-eip"
+    })
   )   
 }
 
@@ -42,9 +42,9 @@ resource "aws_instance" "nginx" {
     volume_type = "gp2"
     tags = merge(
       local.common_tags,
-      map(
-        "Name", "${var.cluster_id}-nginx-root"
-      )
+      tomap({
+        "Name"= "${var.cluster_id}-nginx-root"
+      })
     )    
   }  
 
@@ -53,8 +53,8 @@ resource "aws_instance" "nginx" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-nginx"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-nginx"
+    })
   )
 }
