@@ -6,9 +6,9 @@ resource "aws_vpc" "heracles" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}"
-    )
+    tomap({
+      "Name" = "${var.cluster_id}"
+    })
   )
 }
 
@@ -19,9 +19,9 @@ resource "aws_internet_gateway" "heracles" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-igw"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-igw"
+    })
   )
 }
 
@@ -36,9 +36,9 @@ resource "aws_subnet" "public-subnet" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-pub"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-pub"
+    })
   )
 }
 
@@ -54,9 +54,9 @@ resource "aws_route_table" "public" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-prt"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-prt"
+    })
   )
 }
 
