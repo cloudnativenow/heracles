@@ -15,9 +15,9 @@ resource "aws_eip" "control_eip" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-control-eip"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-control-eip"
+    })
   )   
 }
 
@@ -41,9 +41,10 @@ resource "aws_instance" "control" {
     volume_type = "gp2"
     tags = merge(
       local.common_tags,
-      map(
-        "Name", "${var.cluster_id}-control-root"
-      )
+      tomap({
+        "Name"= "${var.cluster_id}-control-root"
+      })
+
     )    
   }  
 
@@ -52,8 +53,8 @@ resource "aws_instance" "control" {
   # Use our common tags and add a specific name.
   tags = merge(
     local.common_tags,
-    map(
-      "Name", "${var.cluster_id}-control"
-    )
+    tomap({
+      "Name"= "${var.cluster_id}-control"
+    })
   )
 }
