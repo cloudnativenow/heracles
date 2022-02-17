@@ -1,5 +1,6 @@
 # Infrastructure ignores.
 .terraform
+.terraform.lock.hcl
 terraform.tfvars
 terraform.tfstate
 terraform.tfstate.backup
