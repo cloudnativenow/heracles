@@ -24,9 +24,8 @@
 - name: Download Pet Clinic
   become: yes
   shell: |
-    GITHUB_TOKEN={{github_token}}
-    ARCHIVE_DOWNLOAD_URL=$(curl -Ls "https://api.github.com/repos/pangealab/castor/actions/artifacts" | jq -r .artifacts[0].archive_download_url)
-    wget --header="Authorization: Bearer $GITHUB_TOKEN" -qO- $ARCHIVE_DOWNLOAD_URL | zcat > /root/app.jar
+    ARCHIVE_DOWNLOAD_URL=https://github.com/pangealab/castor/releases/download/v1.0.0/artifact.zip
+    wget -qO- $ARCHIVE_DOWNLOAD_URL | zcat > /root/app.jar
 
   tags:
     - download
