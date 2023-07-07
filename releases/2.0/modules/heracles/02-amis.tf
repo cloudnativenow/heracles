@@ -1,20 +1,10 @@
 # Define an Amazon Linux AMI.
 data "aws_ami" "amazonlinux" {
   most_recent = true
-  owners      = ["amazon"]
+  owners = ["565710867928"]
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm*"]
-  }
-
-  filter {
-    name   = "root-device-type"
-    values = ["ebs"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
+    values = ["ServiceNow_AmazonLinux2_Image_*"]
   }
 }
